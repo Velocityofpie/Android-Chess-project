@@ -33,7 +33,7 @@
                 android:layout_width="122dp"
                 android:layout_height="23dp"
                 android:layout_weight="1"
-                android:text="players_turn"
+                android:text=" players_turn"
                 android:textColor="@android:color/white" />
 
             <LinearLayout
@@ -581,6 +581,7 @@
                 android:layout_width="15dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                app:backgroundTint="#1f1e1b"
                 android:onClick="onButtonClick"
                 android:text="Resign" />
 
@@ -589,6 +590,7 @@
                 android:layout_width="1dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                app:backgroundTint="#1f1e1b"
                 android:onClick="onButtonClick"
                 android:text="draw" />
 
@@ -597,13 +599,15 @@
                 android:layout_width="19dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                android:background="@color/black"
+
+                app:backgroundTint="#1f1e1b"
                 android:onClick="onButtonClick"
                 android:text="AI" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="30dp"
+                app:backgroundTint="#1f1e1b"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Back" />
@@ -614,4 +618,4 @@
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
