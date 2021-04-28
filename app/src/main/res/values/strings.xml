@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Chess62</string>
+    <string-array name="menu_array">
+        <item>No Matches Found</item>
+    </string-array>
+    <string name="white_turn">Turn: White</string>
+    <string name="black_turn">Turn: Black</string>
+    <string name="send_draw">Send Draw</string>
+    <string name="cancel_draw">Cancel Draw</string>
+    <string name="resign">Resign</string>
+    <string name="draw">draw</string>
+    <string name="ai">AI</string>
+    <string name="back">Back</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="players_turn">players_turn</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
 </resources>

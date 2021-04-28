@@ -2,15 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#FF0000"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
     tools:context="com.example.chess62.Chess">
 
 
     <LinearLayout
-        android:layout_width="384"
-        android:layout_height="644"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#312e2b"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,16 +29,17 @@
 
             <TextView
                 android:id="@+id/txtTurn"
-                android:layout_width="122dp"
+                android:layout_width="0dp"
                 android:layout_height="23dp"
                 android:layout_weight="1"
-                android:text=" players_turn"
+                android:text="@string/players_turn"
                 android:textColor="@android:color/white" />
 
             <LinearLayout
                 android:id="@+id/promoButtons"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"/>
+                android:layout_height="48dp"
+                android:orientation="horizontal" />
 
         </LinearLayout>
 
@@ -52,6 +52,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/br" />
 
@@ -60,6 +61,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bn" />
 
@@ -68,6 +70,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="TODO"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bb" />
 
@@ -76,6 +79,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="TODO"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bq" />
 
@@ -218,6 +222,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="TODO"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -361,6 +366,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="TODO"
                 android:onClick="onBoardClick" />
         </LinearLayout>
 
@@ -373,6 +379,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -511,6 +518,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="TODO"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wk" />
 
@@ -519,6 +527,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wb" />
 
@@ -527,6 +536,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wq" />
 
@@ -535,6 +545,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wk" />
 
@@ -543,6 +554,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wb" />
 
@@ -551,6 +563,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wn" />
 
@@ -559,6 +572,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
+                android:contentDescription="@string/todo"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wr" />
 
@@ -581,18 +595,20 @@
                 android:layout_width="15dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                app:backgroundTint="#1f1e1b"
+                android:background="#1f1e1b"
                 android:onClick="onButtonClick"
-                android:text="Resign" />
+                android:text="@string/resign"
+                app:backgroundTint="#1f1e1b" />
 
             <Button
                 android:id="@+id/btnUndo"
                 android:layout_width="1dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                app:backgroundTint="#1f1e1b"
+                android:background="#1f1e1b"
                 android:onClick="onButtonClick"
-                android:text="draw" />
+                android:text="@string/draw"
+                app:backgroundTint="#1f1e1b" />
 
             <Button
                 android:id="@+id/btnResign"
@@ -600,17 +616,19 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
 
-                app:backgroundTint="#1f1e1b"
+                android:background="#1f1e1b"
                 android:onClick="onButtonClick"
-                android:text="AI" />
+                android:text="@string/ai"
+                app:backgroundTint="#1f1e1b" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="30dp"
-                app:backgroundTint="#1f1e1b"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Back" />
+                android:background="#1f1e1b"
+                android:text="@string/back"
+                app:backgroundTint="#1f1e1b" />
 
         </LinearLayout>
 
