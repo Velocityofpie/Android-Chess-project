@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/txtTurn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="23dp"
             android:layout_weight="1"
             android:text="@string/players_turn"
@@ -619,7 +619,7 @@
         <Button
             android:id="@+id/btnAI"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="15dp"
+            android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_weight="1"
             android:background="#1f1e1b"
@@ -631,7 +631,7 @@
         <Button
             android:id="@+id/btnUndo"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="1dp"
+            android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_weight="1"
             android:background="#1f1e1b"

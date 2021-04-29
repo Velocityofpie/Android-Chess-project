@@ -13,14 +13,14 @@
         android:text="@string/chess"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/Bpvp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.714" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Bpvp"
         android:layout_width="280dp"
         android:layout_height="150dp"
         android:background="#1f1e1b"
@@ -28,7 +28,6 @@
         app:backgroundTint="#1f1e1b"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.69" />
