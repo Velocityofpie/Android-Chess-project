@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:background="#312e2b"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -23,7 +17,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#1f1e1b"
                 android:onClick="onSortClick"
-                android:text="Sort by Date" />
+                android:textColor="@color/white"
+                android:text="@string/sort_by_date"
+                style="?android:attr/buttonBarButtonStyle"
+                />
 
 
             <Button
@@ -33,7 +30,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#1f1e1b"
                 android:onClick="onSortClick"
-                android:text="Sort by Title" />
+                android:text="@string/sort_by_title"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                />
 
         </LinearLayout>
 
@@ -43,6 +43,6 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-    </LinearLayout>
+
 
 </LinearLayout>
