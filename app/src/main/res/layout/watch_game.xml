@@ -16,7 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.777">
 
-
         <TextView
             android:id="@+id/txtTurn"
             android:layout_width="0dp"
@@ -30,6 +29,7 @@
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
+
         android:layout_height="384dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -624,7 +624,7 @@
             android:layout_weight="1"
             android:background="#1f1e1b"
             android:onClick="onButtonClick"
-            android:text="@string/resign"
+            android:text="@string/back"
             android:textColor="@color/white"
             app:backgroundTint="#1f1e1b" />
 
@@ -636,32 +636,13 @@
             android:layout_weight="1"
             android:background="#1f1e1b"
             android:onClick="onButtonClick"
-            android:text="@string/draw"
+            android:text="@string/next"
             android:textColor="@color/white"
             app:backgroundTint="#1f1e1b" />
 
-        <Button
-            android:id="@+id/btnResign"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="19dp"
-            android:layout_height="37dp"
-            android:layout_weight="1"
-            android:background="#1f1e1b"
-            android:onClick="onButtonClick"
-            android:text="@string/ai"
-            android:textColor="@color/white"
-            app:backgroundTint="#1f1e1b" />
 
-        <Button
-            android:id="@+id/button3"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="30dp"
-            android:layout_height="37dp"
-            android:layout_weight="1"
-            android:background="#1f1e1b"
-            android:text="@string/back"
-            android:textColor="@color/white"
-            app:backgroundTint="#1f1e1b" />
+
+
 
     </LinearLayout>
 

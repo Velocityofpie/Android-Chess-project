@@ -16,7 +16,8 @@
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/button4"
@@ -30,13 +31,13 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495" />
+        app:layout_constraintVertical_bias="0.69" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="280dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="120dp"
         android:background="#1f1e1b"
         android:text="@string/games_played"
         app:backgroundTint="#1f1e1b"

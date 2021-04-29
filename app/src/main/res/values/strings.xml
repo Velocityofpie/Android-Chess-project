@@ -11,6 +11,8 @@
     <string name="sort_by_date">Sort by Date</string>
     <string name="resign">Resign</string>
     <string name="draw">draw</string>
+    <string name="Back">back</string>
+    <string name="Next">next</string>
     <string name="ai">AI</string>
     <string name="square8a">Square</string>
     <string name="square8b">Square</string>
@@ -78,5 +80,7 @@
     <string name="square1h">Square</string>
 
     <string name="back">Back</string>
+    <string name="next">Next</string>
+
 
 </resources>
