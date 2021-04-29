@@ -1,3 +1,8 @@
+/**
+ * @author Joshua Hernandez
+ * @author John Lavin
+ */
+
 package com.example.main;
 
 import androidx.appcompat.app.AppCompatActivity;
