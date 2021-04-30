@@ -188,6 +188,7 @@ public class Chess extends AppCompatActivity {
 
 
 
+
             }
         });
 
