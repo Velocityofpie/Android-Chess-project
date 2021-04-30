@@ -13,375 +13,356 @@ import java.util.Scanner;
  * @author John Lavin
  */
 public class Chess {
-    /**
-     * calls for the game to start
-     */
-    public static void main(String[] args) {
-        //System.out.println("hello");
-        System.out.println();
-        new Chess();
 
-    }
-    private Board newboard;
+    public Board newboard;
     public enum Turn { WHITE, BLACK };
     Turn turn;
+
+
+    boolean draw=false, drawWasOffered=false;
+    boolean GameisRunning=true;
+    boolean enPassantFormation = false;
+    boolean underCheckWhite = false;
+    boolean underCheckBlack = false;
+
     /**
      * makes a new board to be created to start the game
      */
     public Chess() {
         newboard = new Board();
-        start(newboard);
-    }
-    /**
-     * the method that contains main function for the game to run
-     */
-    public void start(Board board) {
-        //System.out.println("checker");
-
-        newboard.printBoard();
-        Scanner scanner = new Scanner(System.in);
-        boolean ilgealmovecheck= false;
-        boolean draw=false, drawWasOffered=false;
-        boolean GameisRunning=true;
-        boolean enPassantFormation = false;
-        boolean underCheckWhite = false;
-        boolean underCheckBlack = false;
-
         turn = Turn.WHITE;
+    }
 
 
-        while (GameisRunning) {
-            //try {
+    public boolean movePiece(String input) {
+        //try {
+        if (turn == Turn.WHITE) {
+            System.out.print("White's move: ");
+        }
+        //Black's turn
+        else {
+            System.out.print("Black's move: ");
+        }
+
+
+        if (input.equals("resign")) {
+            GameisRunning = false;
             if (turn == Turn.WHITE) {
-                System.out.print("White's move: ");
-            }
-            //Black's turn
-            else {
-                System.out.print("Black's move: ");
-            }
-
-            String input = scanner.nextLine();
-            if (input.equals("resign")) {
-                GameisRunning = false;
-                if (turn == Turn.WHITE) {
-                    System.out.print("Black wins");
-                    return;
-                } else {
-                    System.out.print("White wins");
-                    return;
-                }
-
-            }
-
-            String[] fromTo = input.split(" ");
-            //draw accepted
-            if (input.equals("draw") && drawWasOffered){
-                //System.out.println("test");
-                draw = true;
-                endGame(turn, draw);
-            }
-            else {
-                draw=false;
-            }
-
-            if (input.equals("print")) {
-                newboard.printBoard();
-                continue;
-            }
-
-            if (input.length() == 11 && input.substring(6, 11).equals("draw?")){
-                drawWasOffered= true;
-            }
-            else{
-                drawWasOffered = false;
-            }
-
-            int[] arr = findTheKings(newboard);
-            int wKrow = arr[0]; int wKcol = arr[1]; int bKrow = arr[2]; int bKcol = arr[3];
-
-            char ch1 = fromTo[0].charAt(0);
-            char ch2 = fromTo[0].charAt(1);
-            int x1 = ch1 - 96; //file of chosenPiece (i.e. a=1, b=2,...)
-            int y1 = ch2 - 48; //rank of chosenPiece
-
-            char ch3 = fromTo[1].charAt(0);
-            char ch4 = fromTo[1].charAt(1);
-            int x2 = ch3 - 96; //file of desiredLocation (i.e. a=1, b=2,...)
-            int y2 = ch4 - 48; //rank of desiredLocation
-
-            Square chosenPiece = newboard.square[8 - y1][x1 - 1];
-            Square desiredLocation = newboard.square[8 - y2][x2 - 1];
-
-            if (chosenPiece == null) {
-                System.out.println("Illegal move, try again");
-                continue;
-            } else if (turn == Turn.WHITE && chosenPiece.player.equals("b")) {
-                System.out.println("Illegal move, try again");
-                continue;
-            } else if (turn == Turn.BLACK && chosenPiece.player.equals("w")) {
-                System.out.println("Illegal move, try again");
-                continue;
-            } else if (fromTo.length == 3) {
-                char p = fromTo[2].charAt(0);
-                if (!(p == 'R' || p == 'N' || p == 'B' || p == 'Q' || (input.length() == 11 && input.substring(6, 11).equals("draw?")))) {
-                    System.out.println("Illegal move, try again");
-                    continue;
-                }
-            }
-
-
-
-
-
-            //get the selected piece. check if the move is valid
-            boolean isMoveValid = false;
-            if (chosenPiece.piece instanceof Pawn) {
-                Pawn p = (Pawn) chosenPiece.piece;
-                isMoveValid = p.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
-
-            } else if (chosenPiece.piece instanceof Knight) {
-                Knight n = (Knight) chosenPiece.piece;
-                isMoveValid = n.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
-            } else if (chosenPiece.piece instanceof Rook) {
-                Rook r = (Rook) chosenPiece.piece;
-                isMoveValid = r.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
-            } else if (chosenPiece.piece instanceof Bishop) {
-                Bishop b = (Bishop) chosenPiece.piece;
-                isMoveValid = b.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
-            } else if (chosenPiece.piece instanceof Queen) {
-                Queen q = (Queen) chosenPiece.piece;
-                isMoveValid = q.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
+                System.out.print("Black wins");
+                return true;
             } else {
-                King k = (King) chosenPiece.piece;
-                isMoveValid = k.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
-
-
-
+                System.out.print("White wins");
+                return true;
             }
 
-            if (isMoveValid) {
-                newboard.square[8 - y2][x2 - 1] = chosenPiece;
-                newboard.square[8 - y1][x1 - 1] = null;
+        }
+
+        String[] fromTo = input.split(" ");
+        //draw accepted
+        if (input.equals("draw") && drawWasOffered){
+            //System.out.println("test");
+            draw = true;
+            endGame(turn, draw);
+        }
+        else {
+            draw=false;
+        }
 
 
 
-                //check if pawn must be promoted
-                if (turn == Turn.WHITE && chosenPiece.piece instanceof Pawn && y2==8) {
-                    //white pawn is in top row
-                    if (fromTo.length == 3) {
-                        char promote = fromTo[2].charAt(0);
-                        if (promote == 'R') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Rook(), "w");
-                        } else if (promote == 'N') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Knight(), "w");
-                        } else if (promote == 'B') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Bishop(), "w");
-                        } else {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "w");
-                        }
+        if (input.length() == 11 && input.substring(6, 11).equals("draw?")){
+            drawWasOffered= true;
+        }
+        else{
+            drawWasOffered = false;
+        }
+
+        int[] arr = findTheKings(newboard);
+        int wKrow = arr[0]; int wKcol = arr[1]; int bKrow = arr[2]; int bKcol = arr[3];
+
+        char ch1 = fromTo[0].charAt(0);
+        char ch2 = fromTo[0].charAt(1);
+        int x1 = ch1 - 96; //file of chosenPiece (i.e. a=1, b=2,...)
+        int y1 = ch2 - 48; //rank of chosenPiece
+
+        char ch3 = fromTo[1].charAt(0);
+        char ch4 = fromTo[1].charAt(1);
+        int x2 = ch3 - 96; //file of desiredLocation (i.e. a=1, b=2,...)
+        int y2 = ch4 - 48; //rank of desiredLocation
+
+        Square chosenPiece = newboard.square[8 - y1][x1 - 1];
+        Square desiredLocation = newboard.square[8 - y2][x2 - 1];
+
+        if (chosenPiece == null) {
+            System.out.println("Illegal move, try again");
+            return false;
+        } else if (turn == Turn.WHITE && chosenPiece.player.equals("b")) {
+            System.out.println("Illegal move, try again");
+            return false;
+        } else if (turn == Turn.BLACK && chosenPiece.player.equals("w")) {
+            System.out.println("Illegal move, try again");
+            return false;
+        } else if (fromTo.length == 3) {
+            char p = fromTo[2].charAt(0);
+            if (!(p == 'R' || p == 'N' || p == 'B' || p == 'Q' || (input.length() == 11 && input.substring(6, 11).equals("draw?")))) {
+                System.out.println("Illegal move, try again");
+                return false;
+            }
+        }
+
+
+
+
+
+        //get the selected piece. check if the move is valid
+        boolean isMoveValid = false;
+        if (chosenPiece.piece instanceof Pawn) {
+            Pawn p = (Pawn) chosenPiece.piece;
+            isMoveValid = p.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+
+        } else if (chosenPiece.piece instanceof Knight) {
+            Knight n = (Knight) chosenPiece.piece;
+            isMoveValid = n.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+        } else if (chosenPiece.piece instanceof Rook) {
+            Rook r = (Rook) chosenPiece.piece;
+            isMoveValid = r.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+        } else if (chosenPiece.piece instanceof Bishop) {
+            Bishop b = (Bishop) chosenPiece.piece;
+            isMoveValid = b.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+        } else if (chosenPiece.piece instanceof Queen) {
+            Queen q = (Queen) chosenPiece.piece;
+            isMoveValid = q.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+        } else {
+            King k = (King) chosenPiece.piece;
+            isMoveValid = k.isMoveValid(chosenPiece, desiredLocation, newboard, turn, x1, y1, x2, y2, enPassantFormation);
+
+
+
+        }
+
+        if (isMoveValid) {
+            newboard.square[8 - y2][x2 - 1] = chosenPiece;
+            newboard.square[8 - y1][x1 - 1] = null;
+
+
+
+            //check if pawn must be promoted
+            if (turn == Turn.WHITE && chosenPiece.piece instanceof Pawn && y2==8) {
+                //white pawn is in top row
+                if (fromTo.length == 3) {
+                    char promote = fromTo[2].charAt(0);
+                    if (promote == 'R') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Rook(), "w");
+                    } else if (promote == 'N') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Knight(), "w");
+                    } else if (promote == 'B') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Bishop(), "w");
                     } else {
                         newboard.square[8 - y2][x2 - 1] = null;
                         newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "w");
                     }
-                } else if (turn == Turn.BLACK && chosenPiece.piece instanceof Pawn && y2 == 1) {
-                    //black pawn is in bottom row
-                    if (fromTo.length == 3) {
-                        char promote = fromTo[2].charAt(0);
-                        if (promote == 'R') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Rook(), "b");
-                        } else if (promote == 'N') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Knight(), "b");
-                        } else if (promote == 'B') {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Bishop(), "b");
-                        } else {
-                            newboard.square[8 - y2][x2 - 1] = null;
-                            newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "b");
-                        }
+                } else {
+                    newboard.square[8 - y2][x2 - 1] = null;
+                    newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "w");
+                }
+            } else if (turn == Turn.BLACK && chosenPiece.piece instanceof Pawn && y2 == 1) {
+                //black pawn is in bottom row
+                if (fromTo.length == 3) {
+                    char promote = fromTo[2].charAt(0);
+                    if (promote == 'R') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Rook(), "b");
+                    } else if (promote == 'N') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Knight(), "b");
+                    } else if (promote == 'B') {
+                        newboard.square[8 - y2][x2 - 1] = null;
+                        newboard.square[8 - y2][x2 - 1] = new Square(new Bishop(), "b");
                     } else {
                         newboard.square[8 - y2][x2 - 1] = null;
                         newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "b");
                     }
+                } else {
+                    newboard.square[8 - y2][x2 - 1] = null;
+                    newboard.square[8 - y2][x2 - 1] = new Square(new Queen(), "b");
                 }
+            }
 
-                if (chosenPiece.piece instanceof King && Math.abs(x1-x2) == 2) {
-                    //castling, need to move the rook
-                    if (turn == Turn.WHITE) {
-                        if (x1-x2 < 0) {
-                            //moving right
-                            Square rookSq = newboard.square[7][7];
-                            newboard.square[7][7] = null;
-                            newboard.square[7][5] = rookSq;
-                        } else {
-                            //moving left
-                            Square rookSq = newboard.square[7][0];
-                            newboard.square[7][0] = null;
-                            newboard.square[7][3] = rookSq;
+            if (chosenPiece.piece instanceof King && Math.abs(x1-x2) == 2) {
+                //castling, need to move the rook
+                if (turn == Turn.WHITE) {
+                    if (x1-x2 < 0) {
+                        //moving right
+                        Square rookSq = newboard.square[7][7];
+                        newboard.square[7][7] = null;
+                        newboard.square[7][5] = rookSq;
+                    } else {
+                        //moving left
+                        Square rookSq = newboard.square[7][0];
+                        newboard.square[7][0] = null;
+                        newboard.square[7][3] = rookSq;
+                    }
+                } else { //black is castling
+                    if (x1-x2 < 0) {
+                        //moving right
+                        Square rookSq = newboard.square[0][7];
+                        newboard.square[0][7] = null;
+                        newboard.square[0][5] = rookSq;
+                    } else {
+                        //moving left
+                        Square rookSq = newboard.square[0][0];
+                        newboard.square[0][0] = null;
+                        newboard.square[0][3] = rookSq;
+                    }
+                }
+            }
+
+            if (chosenPiece.piece instanceof Pawn) {
+                if (turn == Turn.WHITE) {
+                    //for white's turn, check if theres a black pawn below to see if en passant occurred
+                    if (newboard.square[8 - y2 + 1][x2 - 1] != null) {
+                        if (newboard.square[8 - y2 + 1][x2 - 1].player.equals("b") && newboard.square[8 - y2 + 1][x2 - 1].piece instanceof Pawn && enPassantFormation) {
+                            //if true need to get rid of piece and make en passant false
+                            newboard.square[8 - y2 + 1][x2 - 1] = null;
                         }
-                    } else { //black is castling
-                        if (x1-x2 < 0) {
-                            //moving right
-                            Square rookSq = newboard.square[0][7];
-                            newboard.square[0][7] = null;
-                            newboard.square[0][5] = rookSq;
-                        } else {
-                            //moving left
-                            Square rookSq = newboard.square[0][0];
-                            newboard.square[0][0] = null;
-                            newboard.square[0][3] = rookSq;
+                    }
+                } else {
+                    // for black's turn, check if there's a white pawn above to see if en passant occurred
+                    if (newboard.square[8 - y2 - 1][x2 - 1] != null) {
+                        if (newboard.square[8 - y2 - 1][x2 - 1].player.equals("w") && newboard.square[8 - y2 - 1][x2 - 1].piece instanceof Pawn && enPassantFormation) {
+                            //if true need to get rid of piece and make en passant false
+                            newboard.square[8 - y2 - 1][x2 - 1] = null;
                         }
                     }
                 }
+            }
+            enPassantFormation = false;
 
-                if (chosenPiece.piece instanceof Pawn) {
-                    if (turn == Turn.WHITE) {
-                        //for white's turn, check if theres a black pawn below to see if en passant occurred
-                        if (newboard.square[8 - y2 + 1][x2 - 1] != null) {
-                            if (newboard.square[8 - y2 + 1][x2 - 1].player.equals("b") && newboard.square[8 - y2 + 1][x2 - 1].piece instanceof Pawn && enPassantFormation) {
-                                //if true need to get rid of piece and make en passant false
-                                newboard.square[8 - y2 + 1][x2 - 1] = null;
+            if (Math.abs(y2 - y1) == 2 && chosenPiece.piece instanceof Pawn) {
+                //check if pawn moved two spaces vertically then check if en passant formation is made by checking if there is an opposing pawn next to it
+                if (turn == Turn.WHITE) {
+                    if (x2 == 1) {
+                        if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
+                            }
+                        }
+                    } else if (x2 == 8) {
+                        if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
                         }
                     } else {
-                        // for black's turn, check if there's a white pawn above to see if en passant occurred
-                        if (newboard.square[8 - y2 - 1][x2 - 1] != null) {
-                            if (newboard.square[8 - y2 - 1][x2 - 1].player.equals("w") && newboard.square[8 - y2 - 1][x2 - 1].piece instanceof Pawn && enPassantFormation) {
-                                //if true need to get rid of piece and make en passant false
-                                newboard.square[8 - y2 - 1][x2 - 1] = null;
+                        if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
+                            }
+                        }
+                        if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
                         }
                     }
-                }
-                enPassantFormation = false;
-
-                if (Math.abs(y2 - y1) == 2 && chosenPiece.piece instanceof Pawn) {
-                    //check if pawn moved two spaces vertically then check if en passant formation is made by checking if there is an opposing pawn next to it
-                    if (turn == Turn.WHITE) {
-                        if (x2 == 1) {
-                            if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
+                } else {
+                    if (x2 == 1) {
+                        if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
-                        } else if (x2 == 8) {
-                            if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
-                            }
-                        } else {
-                            if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
-                            }
-                            if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("b") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
+                        }
+                    } else if (x2 == 8) {
+                        if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
                         }
                     } else {
-                        if (x2 == 1) {
-                            if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
+                        if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
-                        } else if (x2 == 8) {
-                            if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
-                            }
-                        } else {
-                            if (newboard.square[8 - y2][x2 - 1 + 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 + 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 + 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
-                            }
-                            if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
-                                if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
-                                    enPassantFormation = true;
-                                }
+                        }
+                        if (newboard.square[8 - y2][x2 - 1 - 1] != null) {
+                            if (newboard.square[8 - y2][x2 - 1 - 1].player.equals("w") && newboard.square[8 - y2][x2 - 1 - 1].piece instanceof Pawn) {
+                                enPassantFormation = true;
                             }
                         }
                     }
                 }
+            }
 
-            } else {
+        } else {
+            System.out.println("Illegal move, try again");
+            return false;
+        }
+
+        if (turn == Turn.BLACK) {
+            boolean selfCheck = CheckingForcheck(newboard, bKrow, bKcol, Turn.WHITE);
+            if (selfCheck) {
+                newboard.square[8 - y1][x1 - 1] = chosenPiece;
+                newboard.square[8 - y2][x2 - 1] = desiredLocation;
                 System.out.println("Illegal move, try again");
-                continue;
+                return false;
             }
+        } else {
+            boolean selfCheck = CheckingForcheck(newboard, wKrow, wKcol, Turn.BLACK);
+            if (selfCheck) {
+                newboard.square[8 - y1][x1 - 1] = chosenPiece;
+                newboard.square[8 - y2][x2 - 1] = desiredLocation;
+                System.out.println("Illegal move, try again");
+                return false;
+            }
+        }
 
-            if (turn == Turn.BLACK) {
-                boolean selfCheck = CheckingForcheck(newboard, bKrow, bKcol, Turn.WHITE);
-                if (selfCheck) {
-                    newboard.square[8 - y1][x1 - 1] = chosenPiece;
-                    newboard.square[8 - y2][x2 - 1] = desiredLocation;
-                    System.out.println("Illegal move, try again");
-                    continue;
+
+        newboard.printBoard();
+        Board example = newboard; //copy of main board
+
+
+        underCheckWhite = CheckingForcheck(example, wKrow, wKcol, turn);
+        underCheckBlack = CheckingForcheck(example, bKrow, bKcol, turn);
+
+        if (turn == Turn.BLACK && underCheckWhite) {
+            King k = (King) newboard.square[wKrow][wKcol].piece;
+            boolean canMoveOut = k.canMoveOut(newboard.square[wKrow][wKcol], newboard, turn, wKcol + 1, 8-wKrow, underCheckWhite);
+
+            if (!canMoveOut) {
+                boolean canBlock = blockCheck(newboard, turn);
+                if (!canBlock) {
+                    System.out.println("Checkmate");
+                    endGame(turn, draw);
+                } else {
+                    System.out.println("Check3");
                 }
             } else {
-                boolean selfCheck = CheckingForcheck(newboard, wKrow, wKcol, Turn.BLACK);
-                if (selfCheck) {
-                    newboard.square[8 - y1][x1 - 1] = chosenPiece;
-                    newboard.square[8 - y2][x2 - 1] = desiredLocation;
-                    System.out.println("Illegal move, try again");
-                    continue;
-                }
+                System.out.println("Check4");
             }
-
-
-            newboard.printBoard();
-            Board example = newboard; //copy of main board
-
-
-            underCheckWhite = CheckingForcheck(example, wKrow, wKcol, turn);
-            underCheckBlack = CheckingForcheck(example, bKrow, bKcol, turn);
-
-            if (turn == Turn.BLACK && underCheckWhite) {
-                King k = (King) newboard.square[wKrow][wKcol].piece;
-                boolean canMoveOut = k.canMoveOut(newboard.square[wKrow][wKcol], newboard, turn, wKcol + 1, 8-wKrow, underCheckWhite);
-
-                if (!canMoveOut) {
-                    boolean canBlock = blockCheck(newboard, turn);
-                    if (!canBlock) {
-                        System.out.println("Checkmate");
-                        endGame(turn, draw);
-                    } else {
-                        System.out.println("Check3");
-                    }
+        } else if (turn == Turn.WHITE && underCheckBlack) {
+            King k = (King) newboard.square[bKrow][bKcol].piece;
+            boolean canMoveOut = k.canMoveOut(newboard.square[bKrow][bKcol], newboard, turn, x1, x2, underCheckBlack);
+            if (!canMoveOut) {
+                boolean canBlock = blockCheck(newboard, turn);
+                if (!canBlock) {
+                    System.out.println("Checkmate");
+                    endGame(turn, draw);
                 } else {
-                    System.out.println("Check4");
+                    System.out.println("Check1");
                 }
-            } else if (turn == Turn.WHITE && underCheckBlack) {
-                King k = (King) newboard.square[bKrow][bKcol].piece;
-                boolean canMoveOut = k.canMoveOut(newboard.square[bKrow][bKcol], newboard, turn, x1, x2, underCheckBlack);
-                if (!canMoveOut) {
-                    boolean canBlock = blockCheck(newboard, turn);
-                    if (!canBlock) {
-                        System.out.println("Checkmate");
-                        endGame(turn, draw);
-                    } else {
-                        System.out.println("Check1");
-                    }
 
-                } else {
-                    System.out.println("Check2");
-                }
+            } else {
+                System.out.println("Check2");
             }
+        }
 
             /*} catch (Exception e) {
                 System.err.println("Not a valid input, try again.");
@@ -391,16 +372,12 @@ public class Chess {
 
 
 
-            if (turn == Turn.WHITE) {
-                turn = Turn.BLACK;
-            } else {
-                turn = Turn.WHITE;
-            }
-
+        if (turn == Turn.WHITE) {
+            turn = Turn.BLACK;
+        } else {
+            turn = Turn.WHITE;
         }
-        endGame(turn, draw);
-
-
+        return true;
     }
 
     /**

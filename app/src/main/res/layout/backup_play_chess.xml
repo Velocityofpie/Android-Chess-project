@@ -48,7 +48,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square8a"
+                android:contentDescription="@string/a8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/br" />
 
@@ -57,7 +57,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square8b"
+                android:contentDescription="@string/b8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bn" />
 
@@ -66,7 +66,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square8c"
+                android:contentDescription="@string/c8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bb" />
 
@@ -75,7 +75,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square8d"
+                android:contentDescription="@string/d8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bq" />
 
@@ -84,7 +84,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square8e"
+                android:contentDescription="@string/e8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bk" />
 
@@ -93,7 +93,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square8f"
+                android:contentDescription="@string/f8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bb" />
 
@@ -102,7 +102,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square8g"
+                android:contentDescription="@string/g8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bn" />
 
@@ -111,7 +111,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square8h"
+                android:contentDescription="@string/h8"
                 android:onClick="onBoardClick"
                 android:src="@drawable/br" />
         </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square7a"
+                android:contentDescription="@string/a7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -134,7 +134,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square7b"
+                android:contentDescription="@string/b7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -143,7 +143,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square7c"
+                android:contentDescription="@string/c7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -152,7 +152,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square7d"
+                android:contentDescription="@string/d7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -161,7 +161,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square7e"
+                android:contentDescription="@string/e7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -170,7 +170,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square7f"
+                android:contentDescription="@string/f7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -179,7 +179,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square7g"
+                android:contentDescription="@string/g7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
 
@@ -188,7 +188,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square7h"
+                android:contentDescription="@string/h7"
                 android:onClick="onBoardClick"
                 android:src="@drawable/bp" />
         </LinearLayout>
@@ -202,7 +202,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square6a"
+                android:contentDescription="@string/a6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -210,7 +210,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square6b"
+                android:contentDescription="@string/b6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -218,7 +218,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square6c"
+                android:contentDescription="@string/c6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -226,7 +226,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square6d"
+                android:contentDescription="@string/d6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -234,7 +234,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square6e"
+                android:contentDescription="@string/e6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -242,7 +242,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square6f"
+                android:contentDescription="@string/f6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -250,7 +250,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square6g"
+                android:contentDescription="@string/g6"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -258,7 +258,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square6g"
+                android:contentDescription="@string/h6"
                 android:onClick="onBoardClick" />
         </LinearLayout>
 
@@ -271,7 +271,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square5a"
+                android:contentDescription="@string/a5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -279,7 +279,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square5b"
+                android:contentDescription="@string/b5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -287,7 +287,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square5c"
+                android:contentDescription="@string/c5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -295,7 +295,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square5d"
+                android:contentDescription="@string/d5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -303,7 +303,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square5e"
+                android:contentDescription="@string/e5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -311,7 +311,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square5f"
+                android:contentDescription="@string/f5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -319,7 +319,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square5g"
+                android:contentDescription="@string/g5"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -327,7 +327,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square5h"
+                android:contentDescription="@string/h5"
                 android:onClick="onBoardClick" />
         </LinearLayout>
 
@@ -340,7 +340,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square4a"
+                android:contentDescription="@string/a4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -348,7 +348,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square4b"
+                android:contentDescription="@string/b4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -356,7 +356,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square4c"
+                android:contentDescription="@string/c4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -364,7 +364,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square4d"
+                android:contentDescription="@string/d4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -372,7 +372,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square4e"
+                android:contentDescription="@string/e4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -380,7 +380,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square4f"
+                android:contentDescription="@string/f4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -388,7 +388,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square4g"
+                android:contentDescription="@string/g4"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -396,7 +396,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square4h"
+                android:contentDescription="@string/h4"
                 android:onClick="onBoardClick" />
         </LinearLayout>
 
@@ -409,7 +409,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square3a"
+                android:contentDescription="@string/a3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -417,7 +417,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square3b"
+                android:contentDescription="@string/b3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -425,7 +425,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square3c"
+                android:contentDescription="@string/c3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -433,7 +433,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square3d"
+                android:contentDescription="@string/d3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -441,7 +441,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square3e"
+                android:contentDescription="@string/e3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -449,7 +449,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square3f"
+                android:contentDescription="@string/f3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -457,7 +457,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square3g"
+                android:contentDescription="@string/g3"
                 android:onClick="onBoardClick" />
 
             <ImageButton
@@ -465,7 +465,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square3h"
+                android:contentDescription="@string/h3"
                 android:onClick="onBoardClick" />
         </LinearLayout>
 
@@ -478,7 +478,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square2a"
+                android:contentDescription="@string/a2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -487,7 +487,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square2b"
+                android:contentDescription="@string/b2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -496,7 +496,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square2c"
+                android:contentDescription="@string/c2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -505,7 +505,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square2d"
+                android:contentDescription="@string/d2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -514,7 +514,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#eeeed5"
-                android:contentDescription="@string/square2e"
+                android:contentDescription="@string/e2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -523,7 +523,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#7d945d"
-                android:contentDescription="@string/square2f"
+                android:contentDescription="@string/f2"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp" />
 
@@ -534,7 +534,7 @@
                 android:background="#eeeed5"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp"
-                android:contentDescription="@string/square2g" />
+                android:contentDescription="@string/g2" />
 
             <ImageButton
                 android:id="@+id/btn2h"
@@ -543,7 +543,7 @@
                 android:background="#7d945d"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wp"
-                android:contentDescription="@string/square2h" />
+                android:contentDescription="@string/h2" />
         </LinearLayout>
 
         <LinearLayout
@@ -557,7 +557,7 @@
                 android:background="#7d945d"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wr"
-                android:contentDescription="@string/square1a" />
+                android:contentDescription="@string/a1" />
 
             <ImageButton
                 android:id="@+id/btn1b"
@@ -566,7 +566,7 @@
                 android:background="#eeeed5"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wk"
-                android:contentDescription="@string/square1b" />
+                android:contentDescription="@string/b1" />
 
             <ImageButton
                 android:id="@+id/btn1c"
@@ -575,7 +575,7 @@
                 android:background="#7d945d"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wb"
-                android:contentDescription="@string/square1c" />
+                android:contentDescription="@string/c1" />
 
             <ImageButton
                 android:id="@+id/btn1d"
@@ -584,7 +584,7 @@
                 android:background="#eeeed5"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wq"
-                android:contentDescription="@string/square1d" />
+                android:contentDescription="@string/d1" />
 
             <ImageButton
                 android:id="@+id/btn1e"
@@ -593,7 +593,7 @@
                 android:background="#7d945d"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wk"
-                android:contentDescription="@string/square1e" />
+                android:contentDescription="@string/e1" />
 
             <ImageButton
                 android:id="@+id/btn1f"
@@ -602,7 +602,7 @@
                 android:background="#eeeed5"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wb"
-                android:contentDescription="@string/square1f" />
+                android:contentDescription="@string/f1" />
 
             <ImageButton
                 android:id="@+id/btn1g"
@@ -611,7 +611,7 @@
                 android:background="#7d945d"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wn"
-                android:contentDescription="@string/square1g" />
+                android:contentDescription="@string/g1" />
 
             <ImageButton
                 android:id="@+id/btn1h"
@@ -620,7 +620,7 @@
                 android:background="#eeeed5"
                 android:onClick="onBoardClick"
                 android:src="@drawable/wr"
-                android:contentDescription="@string/square1h" />
+                android:contentDescription="@string/h1" />
 
         </LinearLayout>
 
