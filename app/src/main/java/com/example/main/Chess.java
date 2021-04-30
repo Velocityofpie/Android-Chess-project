@@ -37,9 +37,11 @@ public class Chess extends AppCompatActivity {
             }
         });
     }
-
+    int presscounter =0;
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        presscounter++;
+        if(presscounter==2)
+            super.onBackPressed();
     }
 }
