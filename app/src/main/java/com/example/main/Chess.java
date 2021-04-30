@@ -27,6 +27,7 @@ public class Chess extends AppCompatActivity {
 
     TextView txtTurn;
 
+    String input = "";
     String output = "";
     boolean gameStillRunning = true;
 
@@ -106,12 +107,65 @@ public class Chess extends AppCompatActivity {
                 btn_h6 = findViewById(R.id.btn6h);
                 btn_h7 = findViewById(R.id.btn7h);
                 btn_h8 = findViewById(R.id.btn8h);
-                txtTurn = findViewById(R.id.txtTurn);
 
+
+
+
+                txtTurn = findViewById(R.id.txtTurn);
                 txtTurn.setText("White's turn");
 
                 //create a new chess game
                 chess.Chess game = new chess.Chess();
+
+                btn_a1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        input = (String) btn_a1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output = " " + input;
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                output = "";
+                                System.out.println("it moved to a1");
+                            }
+                        }
+                    }
+                });
+                btn_a2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        input = (String) btn_a2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output = " " + input;
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                output = "";
+                                System.out.println("it moved to a2");
+                            }
+                        }
+                    }
+                });
+                btn_a3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        input = (String) btn_a3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output = " " + input;
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                output = "";
+                                System.out.println("it moved to a3");
+                            }
+                        }
+                    }
+                });
+
 
 
 
