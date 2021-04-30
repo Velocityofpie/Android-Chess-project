@@ -382,7 +382,6 @@
                 android:background="#7d945d"
                 android:contentDescription="@string/square4f"
                 android:onClick="onBoardClick" />
-
             <ImageButton
                 android:id="@+id/btn4g"
                 android:layout_width="48dp"
@@ -390,7 +389,6 @@
                 android:background="#eeeed5"
                 android:contentDescription="@string/square4g"
                 android:onClick="onBoardClick" />
-
             <ImageButton
                 android:id="@+id/btn4h"
                 android:layout_width="48dp"
