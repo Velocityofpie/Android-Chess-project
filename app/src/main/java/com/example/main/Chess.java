@@ -42,6 +42,7 @@ public class Chess extends AppCompatActivity {
         playerVplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("yahoo");
                 setContentView(R.layout.play_chess);
                 btn_a1 = findViewById(R.id.btn1a);
                 btn_a2 = findViewById(R.id.btn2a);
@@ -120,6 +121,7 @@ public class Chess extends AppCompatActivity {
                 btn_a1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        System.out.println("a1");
                         input = (String) btn_a1.getContentDescription();
                         if (output.equals("")) {
                             output += input;
@@ -136,11 +138,12 @@ public class Chess extends AppCompatActivity {
                 btn_a2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        System.out.println(btn_a2.getContentDescription());
                         input = (String) btn_a2.getContentDescription();
                         if (output.equals("")) {
                             output += input;
                         } else if (output.length() == 2) {
-                            output = " " + input;
+                            output += " " + input;
                             boolean moved = game.movePiece(output);
                             if (moved) {
                                 output = "";
@@ -152,11 +155,13 @@ public class Chess extends AppCompatActivity {
                 btn_a3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        System.out.println(btn_a3.getContentDescription());
                         input = (String) btn_a3.getContentDescription();
                         if (output.equals("")) {
                             output += input;
                         } else if (output.length() == 2) {
-                            output = " " + input;
+                            output += " " + input;
+                            System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
                                 output = "";
