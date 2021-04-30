@@ -148,20 +148,30 @@ public class Chess extends AppCompatActivity {
                 btn_a1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        System.out.println("a1");
+                        System.out.println(btn_a1.getContentDescription());
                         input = (String) btn_a1.getContentDescription();
                         if (output.equals("")) {
                             output += input;
                         } else if (output.length() == 2) {
-                            output = " " + input;
+                            output += " " + input;
+                            System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                output = "";
                                 System.out.println("it moved to a1");
+                                btn_a1.setImageResource(R.drawable.wp);
+                                ImageButton b = getImageButton(imageButtons, output.substring(0,2));
+                                b.setImageResource(R.drawable.nullimg);
+                                output = "";
                             }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
                         }
                     }
                 });
+
                 btn_a2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -171,14 +181,24 @@ public class Chess extends AppCompatActivity {
                             output += input;
                         } else if (output.length() == 2) {
                             output += " " + input;
+                            System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                output = "";
                                 System.out.println("it moved to a2");
+                                btn_a1.setImageResource(R.drawable.wp);
+                                ImageButton b = getImageButton(imageButtons, output.substring(0,2));
+                                b.setImageResource(R.drawable.nullimg);
+                                output = "";
                             }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
                         }
                     }
                 });
+
                 btn_a3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -197,6 +217,11 @@ public class Chess extends AppCompatActivity {
                                 b.setImageResource(R.drawable.nullimg);
                                 output = "";
                             }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
                         }
                     }
                 });

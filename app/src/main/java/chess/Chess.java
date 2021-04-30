@@ -16,7 +16,7 @@ public class Chess {
 
     public Board newboard;
     public enum Turn { WHITE, BLACK };
-    Turn turn;
+    public Turn turn;
 
 
     boolean draw=false, drawWasOffered=false;
