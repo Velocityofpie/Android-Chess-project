@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/txtTurn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="23dp"
             android:layout_weight="1"
             android:text="@string/players_turn"
