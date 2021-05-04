@@ -18,6 +18,7 @@ import android.widget.TextView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import chess.Board;
 import chess.Square;
 import pieces.Bishop;
 import pieces.King;
@@ -40,11 +41,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                 btn_a8, btn_b8, btn_c8, btn_d8, btn_e8, btn_f8, btn_g8, btn_h8;
 
         Button btnAI;
+        Button btnBack;
 
         TextView txtTurn;
 
         String input = "";
         String output = "";
+        ArrayList<chess.Board> moves = new ArrayList<chess.Board>();
         String initialPiece;
         boolean gameStillRunning = true;
 
@@ -127,6 +130,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                 btn_h8 = findViewById(R.id.btn8h);
 
                 btnAI = findViewById(R.id.btnAI);
+                btnBack = findViewById(R.id.btnBack);
 
 
                 txtTurn = findViewById(R.id.txtTurn);
@@ -134,6 +138,7 @@ public class Chess<exception_var> extends AppCompatActivity {
 
                 //create a new chess game
                 chess.Chess game = new chess.Chess();
+                moves.add(new chess.Board(game.newboard));
 
                 //create an array of the buttons
                 ImageButton[][] imageButtons = {
@@ -184,9 +189,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+                                chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+                                printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+                                btnBack.setEnabled(true);
+                            }
+                            output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -209,9 +218,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -234,9 +246,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -258,9 +273,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -282,9 +300,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -306,9 +327,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -330,9 +354,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -354,9 +381,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -378,9 +408,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -402,9 +435,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -426,9 +462,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -450,9 +489,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -474,9 +516,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -498,9 +543,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -522,9 +570,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -546,9 +597,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -570,9 +624,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -594,9 +651,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -618,9 +678,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -642,9 +705,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -666,9 +732,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -690,9 +759,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -714,9 +786,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -738,9 +813,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -762,9 +840,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -786,9 +867,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -810,9 +894,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -834,9 +921,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -858,9 +948,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -882,9 +975,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -906,9 +1002,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -930,9 +1029,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -954,9 +1056,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -978,9 +1083,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1002,9 +1110,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1026,9 +1137,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1050,9 +1164,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1074,9 +1191,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1098,9 +1218,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1122,9 +1245,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1146,9 +1272,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1170,9 +1299,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1194,9 +1326,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1218,9 +1353,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1242,9 +1380,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1266,9 +1407,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1290,9 +1434,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1314,9 +1461,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1338,9 +1488,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1362,9 +1515,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1386,9 +1542,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1410,9 +1569,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1434,9 +1596,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1458,9 +1623,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1482,9 +1650,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1506,9 +1677,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1530,9 +1704,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1554,9 +1731,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1578,9 +1758,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1602,9 +1785,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1626,9 +1812,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1650,9 +1839,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1674,9 +1866,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1698,9 +1893,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1722,9 +1920,12 @@ public class Chess<exception_var> extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                    printButtons(imageButtons, game.newboard);
-                }
-                output = "";
+        chess.Board b = new Board(game.newboard);
+                                moves.add(b);
+        printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
+    }
+    output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1741,8 +1942,33 @@ public class Chess<exception_var> extends AppCompatActivity {
                         output = "";
                         boolean moved = game.movePiece("ai");
                         if (moved) {
+                            chess.Board b = new Board(game.newboard);
+                            moves.add(b);
                             printButtons(imageButtons, game.newboard);
+                                btnBack.setEnabled(true);
                         }
+                    }
+                });
+
+                btnBack.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int lastIndex = moves.size()-1;
+                        System.out.println(moves.size());
+                        moves.remove(lastIndex);
+                        game.setBoard(moves.get(lastIndex-1));
+                        //print board
+                        printButtons(imageButtons, game.newboard);
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            game.turn = chess.Chess.Turn.WHITE;
+                            txtTurn.setText(R.string.whiteTurn);
+                        } else if (game.turn == chess.Chess.Turn.WHITE){
+                            game.turn = chess.Chess.Turn.BLACK;
+                            txtTurn.setText(R.string.blackTurn);
+                        }
+
+                        //disable btnBack
+                        btnBack.setEnabled(false);
                     }
                 });
 
