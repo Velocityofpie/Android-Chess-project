@@ -166,9 +166,7 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                btn_a1.setImageResource(R.drawable.wp);
-                                ImageButton b = getImageButton(imageButtons, output.substring(0,2));
-                                b.setImageResource(R.drawable.nullimg);
+                                printButtons(imageButtons, game.newboard);
                                 output = "";
                             }
                         }
@@ -192,9 +190,7 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                btn_a1.setImageResource(R.drawable.wp);
-                                ImageButton b = getImageButton(imageButtons, output.substring(0,2));
-                                b.setImageResource(R.drawable.nullimg);
+                                printButtons(imageButtons, game.newboard);
                                 output = "";
                             }
                         }
@@ -218,35 +214,7 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-
-                                char ch1 = output.charAt(0);
-                                char ch2 = output.charAt(1);
-                                int x1 = ch1 - 96; //file of chosenPiece (i.e. a=1, b=2,...)
-                                int y1 = ch2 - 48; //rank of chosenPiece
-                                char ch3 = output.charAt(3);
-                                char ch4 = output.charAt(4);
-                                int x2 = ch3 - 96; //file of desiredLocation (i.e. a=1, b=2,...)
-                                int y2 = ch4 - 48; //rank of desiredLocation
-
-                                Piece p = game.newboard.square[8-y2][x2-1].piece;
-                                if (p instanceof Pawn) {
-                                    btn_a3.setImageResource(R.drawable.wp);
-                                } else if (p instanceof Knight) {
-                                    btn_a3.setImageResource(R.drawable.wn);
-                                } else if (p instanceof Rook) {
-                                    btn_a3.setImageResource(R.drawable.wr);
-                                } else if (p instanceof Bishop) {
-                                    btn_a3.setImageResource(R.drawable.wb);
-                                } else if (p instanceof Queen) {
-                                    btn_a3.setImageResource(R.drawable.wq);
-                                } else if (p instanceof King) {
-                                    btn_a3.setImageResource(R.drawable.wk);
-                                } else {
-                                    btn_a3.setImageResource(R.drawable.nullimg);
-                                }
-
-                                ImageButton b = getImageButton(imageButtons, output.substring(0,2));
-                                b.setImageResource(R.drawable.nullimg);
+                                printButtons(imageButtons, game.newboard);
                                 output = "";
                             }
                         }
@@ -258,26 +226,1493 @@ public class Chess extends AppCompatActivity {
                     }
                 });
 
+                btn_a4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_a4.getContentDescription());
+                        input = (String) btn_a4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_a5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_a5.getContentDescription());
+                        input = (String) btn_a5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_a6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_a6.getContentDescription());
+                        input = (String) btn_a6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_a7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_a7.getContentDescription());
+                        input = (String) btn_a7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_a8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_a8.getContentDescription());
+                        input = (String) btn_a8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b1.getContentDescription());
+                        input = (String) btn_b1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b2.getContentDescription());
+                        input = (String) btn_b2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b3.getContentDescription());
+                        input = (String) btn_b3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b4.getContentDescription());
+                        input = (String) btn_b4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b5.getContentDescription());
+                        input = (String) btn_b5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b6.getContentDescription());
+                        input = (String) btn_b6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b7.getContentDescription());
+                        input = (String) btn_b7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_b8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_b8.getContentDescription());
+                        input = (String) btn_b8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c1.getContentDescription());
+                        input = (String) btn_c1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c2.getContentDescription());
+                        input = (String) btn_c2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c3.getContentDescription());
+                        input = (String) btn_c3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c4.getContentDescription());
+                        input = (String) btn_c4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c5.getContentDescription());
+                        input = (String) btn_c5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c6.getContentDescription());
+                        input = (String) btn_c6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c7.getContentDescription());
+                        input = (String) btn_c7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
+                btn_c8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_c8.getContentDescription());
+                        input = (String) btn_c8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d1.getContentDescription());
+                        input = (String) btn_d1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d2.getContentDescription());
+                        input = (String) btn_d2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d3.getContentDescription());
+                        input = (String) btn_d3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d4.getContentDescription());
+                        input = (String) btn_d4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d5.getContentDescription());
+                        input = (String) btn_d5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d5.getContentDescription());
+                        input = (String) btn_d5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d6.getContentDescription());
+                        input = (String) btn_d6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d7.getContentDescription());
+                        input = (String) btn_d7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_d8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_d8.getContentDescription());
+                        input = (String) btn_d8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e1.getContentDescription());
+                        input = (String) btn_e1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e2.getContentDescription());
+                        input = (String) btn_e2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e3.getContentDescription());
+                        input = (String) btn_e3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e4.getContentDescription());
+                        input = (String) btn_e4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e5.getContentDescription());
+                        input = (String) btn_e5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e6.getContentDescription());
+                        input = (String) btn_e6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e7.getContentDescription());
+                        input = (String) btn_e7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_e8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_e8.getContentDescription());
+                        input = (String) btn_e8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f1.getContentDescription());
+                        input = (String) btn_f1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f2.getContentDescription());
+                        input = (String) btn_f2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f3.getContentDescription());
+                        input = (String) btn_f3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f4.getContentDescription());
+                        input = (String) btn_f4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f5.getContentDescription());
+                        input = (String) btn_f5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f6.getContentDescription());
+                        input = (String) btn_f6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f7.getContentDescription());
+                        input = (String) btn_f7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_f8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_f8.getContentDescription());
+                        input = (String) btn_f8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g1.getContentDescription());
+                        input = (String) btn_g1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g2.getContentDescription());
+                        input = (String) btn_g2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g3.getContentDescription());
+                        input = (String) btn_g3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g4.getContentDescription());
+                        input = (String) btn_g4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g5.getContentDescription());
+                        input = (String) btn_g5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g6.getContentDescription());
+                        input = (String) btn_g6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g7.getContentDescription());
+                        input = (String) btn_g7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_g8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_g8.getContentDescription());
+                        input = (String) btn_g8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h1.getContentDescription());
+                        input = (String) btn_h1.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h2.getContentDescription());
+                        input = (String) btn_h2.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h3.getContentDescription());
+                        input = (String) btn_h3.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h4.getContentDescription());
+                        input = (String) btn_h4.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h5.getContentDescription());
+                        input = (String) btn_h5.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h6.getContentDescription());
+                        input = (String) btn_h6.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h7.getContentDescription());
+                        input = (String) btn_h7.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
+
+                btn_h8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(btn_h8.getContentDescription());
+                        input = (String) btn_h8.getContentDescription();
+                        if (output.equals("")) {
+                            output += input;
+                        } else if (output.length() == 2) {
+                            output += " " + input;
+                            System.out.println(output);
+                            boolean moved = game.movePiece(output);
+                            if (moved) {
+                                printButtons(imageButtons, game.newboard);
+                                output = "";
+                            }
+                        }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            txtTurn.setText("Black's turn");
+                        } else {
+                            txtTurn.setText("White's turn");
+                        }
+                    }
+                });
 
 
 
@@ -314,12 +1749,45 @@ public class Chess extends AppCompatActivity {
         return buttons[0][0];
     }
 
-    public void printButtons(ImageButton[][] arr, Board board) {
+    public void printButtons(ImageButton[][] arr, chess.Board board) {
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 ImageButton currButton = arr[i][j];
+                Piece p = board.square[i][j].piece;
+                String player = board.square[i][j].player;
 
+                if (player.equals("w")) {
+                    if (p instanceof Pawn) {
+                        currButton.setImageResource(R.drawable.wp);
+                    } else if (p instanceof Knight) {
+                        currButton.setImageResource(R.drawable.wn);
+                    } else if (p instanceof Rook) {
+                        currButton.setImageResource(R.drawable.wr);
+                    } else if (p instanceof Bishop) {
+                        currButton.setImageResource(R.drawable.wb);
+                    } else if (p instanceof Queen) {
+                        currButton.setImageResource(R.drawable.wq);
+                    } else if (p instanceof King) {
+                        currButton.setImageResource(R.drawable.wk);
+                    }
+                } else if (player.equals("b")) {
+                    if (p instanceof Pawn) {
+                        currButton.setImageResource(R.drawable.bp);
+                    } else if (p instanceof Knight) {
+                        currButton.setImageResource(R.drawable.bn);
+                    } else if (p instanceof Rook) {
+                        currButton.setImageResource(R.drawable.br);
+                    } else if (p instanceof Bishop) {
+                        currButton.setImageResource(R.drawable.bb);
+                    } else if (p instanceof Queen) {
+                        currButton.setImageResource(R.drawable.bq);
+                    } else if (p instanceof King) {
+                        currButton.setImageResource(R.drawable.bk);
+                    }
+                } else {
+                    currButton.setImageResource(R.drawable.nullimg);
+                }
             }
         }
     }
