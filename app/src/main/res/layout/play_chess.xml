@@ -618,7 +618,7 @@
         app:layout_constraintVertical_bias="0.279">
 
         <Button
-            android:id="@+id/btnAI"
+            android:id="@+id/btnResign"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="15dp"
             android:layout_height="37dp"
@@ -630,7 +630,7 @@
             app:backgroundTint="#1f1e1b" />
 
         <Button
-            android:id="@+id/btnUndo"
+            android:id="@+id/btnDraw"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="1dp"
             android:layout_height="37dp"
@@ -642,7 +642,7 @@
             app:backgroundTint="#1f1e1b" />
 
         <Button
-            android:id="@+id/btnResign"
+            android:id="@+id/btnAI"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="19dp"
             android:layout_height="37dp"
@@ -654,7 +654,7 @@
             app:backgroundTint="#1f1e1b" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnBack"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="30dp"
             android:layout_height="37dp"
