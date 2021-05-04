@@ -10,7 +10,21 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import chess.Board;
+
 public class Saved_games_list {
+
+
+    /*
+    if (moved) {
+        moves.add(output);
+        printButtons(imageButtons, game.newboard);
+    }
+    output = "";
+
+
+
+     */
 //    private ListView matchListView;
 //    private String[] matches;
 //

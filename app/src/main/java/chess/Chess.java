@@ -1346,4 +1346,8 @@ public class Chess {
 
         return false;
     }
+
+    public void setBoard(Board b) {
+        this.newboard = b;
+    }
 }

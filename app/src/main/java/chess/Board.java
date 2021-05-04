@@ -70,6 +70,51 @@ public class Board {
 
     }
 
+    public Board(Board sample) {
+        //this constructor creates a copy of a sample board
+        square = new Square[8][8];
+
+        //loop through the sample board and copy new pieces
+        for (int i=0; i<8; i++) {
+            for (int j=0; j<8; j++) {
+
+                Square currSq = sample.square[i][j];
+                if (currSq == null) {continue;}
+                if (currSq.player.equals("w") && currSq.piece instanceof Pawn) {
+                    this.square[i][j] = new Square(new Pawn(), "w");
+                } else if (currSq.player.equals("w") && currSq.piece instanceof Rook) {
+                    this.square[i][j] = new Square(new Rook(), "w");
+                } else if (currSq.player.equals("w") && currSq.piece instanceof Bishop) {
+                    this.square[i][j] = new Square(new Bishop(), "w");
+                } else if (currSq.player.equals("w") && currSq.piece instanceof Knight) {
+                    this.square[i][j] = new Square(new Knight(), "w");
+                } else if (currSq.player.equals("w") && currSq.piece instanceof Queen) {
+                    this.square[i][j] = new Square(new Queen(), "w");
+                } else if (currSq.player.equals("w") && currSq.piece instanceof King) {
+                    this.square[i][j] = new Square(new King(), "w");
+
+
+                } else if (currSq.player.equals("b") && currSq.piece instanceof Pawn) {
+                    this.square[i][j] = new Square(new Pawn(), "b");
+                } else if (currSq.player.equals("b") && currSq.piece instanceof Rook) {
+                    this.square[i][j] = new Square(new Rook(), "b");
+                } else if (currSq.player.equals("b") && currSq.piece instanceof Bishop) {
+                    this.square[i][j] = new Square(new Bishop(), "b");
+                } else if (currSq.player.equals("b") && currSq.piece instanceof Knight) {
+                    this.square[i][j] = new Square(new Knight(), "b");
+                } else if (currSq.player.equals("b") && currSq.piece instanceof Queen) {
+                    this.square[i][j] = new Square(new Queen(), "b");
+                } else if (currSq.player.equals("b") && currSq.piece instanceof King) {
+                    this.square[i][j] = new Square(new King(), "b");
+                }
+
+
+            }
+        }
+
+
+    }
+
     /**
      * Prints out the formated chess board
      */
@@ -94,4 +139,7 @@ public class Board {
         }
         System.out.println(" a  b  c  d  e  f  g  h\n");
     }
+
+
+
 }
