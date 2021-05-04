@@ -42,6 +42,7 @@ public class Chess<exception_var> extends AppCompatActivity {
 
         Button btnAI;
         Button btnBack;
+        Button btnResign;
 
         TextView txtTurn;
 
@@ -131,6 +132,7 @@ public class Chess<exception_var> extends AppCompatActivity {
 
                 btnAI = findViewById(R.id.btnAI);
                 btnBack = findViewById(R.id.btnBack);
+                btnResign = findViewById(R.id.btnResign);
 
 
                 txtTurn = findViewById(R.id.txtTurn);
@@ -169,6 +171,20 @@ public class Chess<exception_var> extends AppCompatActivity {
                     public void openDialog() {
                         Dialogpop dialogpop = new Dialogpop();
                         dialogpop.show(getSupportFragmentManager(), "example dia");
+                    }
+                });
+
+                btnResign.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        game.movePiece("resign");
+                        openDialog();
+                    }
+
+                    public void openDialog() {
+                        Dialogpop dialogpop = new Dialogpop();
+                        String str = game.turn + " resigned";
+                        dialogpop.show(getSupportFragmentManager(), str);
                     }
                 });
 
