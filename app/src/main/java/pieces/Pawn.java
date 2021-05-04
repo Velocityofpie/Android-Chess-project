@@ -81,6 +81,8 @@ public class Pawn extends Piece {
         } else if (y2-y1 == 0) {
             //cannot move horizontally ever
             return false;
+        } else if (Math.abs(x1-x2) != 0 && Math.abs(y1-y2) == 2) {
+            return false;
         }
 
 

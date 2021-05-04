@@ -170,9 +170,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -194,9 +194,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -218,9 +218,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -242,9 +242,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -266,9 +266,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -290,9 +290,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -314,9 +314,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -338,9 +338,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -362,9 +362,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -386,9 +386,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -410,9 +410,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -434,9 +434,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -458,9 +458,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -482,9 +482,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -506,9 +506,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -530,9 +530,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -554,9 +554,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -578,9 +578,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -602,9 +602,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -626,9 +626,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -650,9 +650,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -674,9 +674,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -698,9 +698,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -722,9 +722,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -746,9 +746,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -770,9 +770,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -794,9 +794,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -818,9 +818,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -842,9 +842,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -866,9 +866,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -890,9 +890,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -914,9 +914,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -938,9 +938,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -962,9 +962,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -986,9 +986,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1010,9 +1010,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1034,9 +1034,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1058,9 +1058,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1082,9 +1082,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1106,9 +1106,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1130,9 +1130,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1154,9 +1154,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1178,9 +1178,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1202,9 +1202,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1226,9 +1226,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1250,9 +1250,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1274,9 +1274,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1298,9 +1298,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1322,9 +1322,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1346,9 +1346,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1370,9 +1370,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1394,9 +1394,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1418,9 +1418,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1442,9 +1442,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1466,9 +1466,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1490,9 +1490,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1514,9 +1514,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1538,9 +1538,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1562,9 +1562,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1586,9 +1586,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1610,9 +1610,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1634,9 +1634,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1658,9 +1658,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1682,9 +1682,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
@@ -1706,9 +1706,9 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                printButtons(imageButtons, game.newboard);
-                                output = "";
-                            }
+                    printButtons(imageButtons, game.newboard);
+                }
+                output = "";
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
                             txtTurn.setText(R.string.blackTurn);
