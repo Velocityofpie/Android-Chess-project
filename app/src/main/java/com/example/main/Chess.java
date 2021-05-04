@@ -154,18 +154,22 @@ public class Chess<exception_var> extends AppCompatActivity {
                         buttonArrayList.add(imageButtons[i][j]);
                     }
                 }
-                btnDraw = (Button) findViewById(R.id.btnDraw);
-                btnDraw.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        openDialog();
-                    }
+                Bundle bundle = new Bundle();
+                //String sending_turn = null;
 
-                    public void openDialog() {
-                        Dialogpop dialogpop = new Dialogpop();
-                        dialogpop.show(getSupportFragmentManager(), "example dia");
-                    }
-                });
+                //bundle.putString(game.turn);
+//                btnDraw = (Button) findViewById(R.id.btnDraw);
+//                btnDraw.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        openDialog();
+//                    }
+//
+//                    public void openDialog() {
+//                        Dialogpop dialogpop = new Dialogpop();
+//                        dialogpop.show(getSupportFragmentManager(), "example dia");
+//                    }
+//                });
 
 
                 btn_a1.setOnClickListener(new View.OnClickListener() {
