@@ -164,19 +164,19 @@ public class Chess<exception_var> extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 //String sending_turn = null;
 
-                //bundle.putString(game.turn);
-//                btnDraw = (Button) findViewById(R.id.btnDraw);
-//                btnDraw.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        openDialog();
-//                    }
-//
-//                    public void openDialog() {
-//                        Dialogpop dialogpop = new Dialogpop();
-//                        dialogpop.show(getSupportFragmentManager(), "example dia");
-//                    }
-//                });
+                bundle.putString("draw", "Game ended in a draw");
+                btnDraw = (Button) findViewById(R.id.btnDraw);
+                btnDraw.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openDialog();
+                    }
+
+                    public void openDialog() {
+                        Dialogpop dialogpop = new Dialogpop();
+                        dialogpop.show(getSupportFragmentManager(), "example dia");
+                    }
+                });
 
                 btnResign.setOnClickListener(new View.OnClickListener() {
                     @Override

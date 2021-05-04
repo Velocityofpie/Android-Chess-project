@@ -11,12 +11,12 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 public class Dialogpop extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog (Bundle saveInstanceState) {
-        //Bundle bundle = getArguments();
+        Bundle bundle = getArguments();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // String p = bundle.getString(game.Trun);
-        builder.setTitle("Draw Requested")
-                .setMessage("Do you want to accept the draw?").setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setTitle(bundle.getString("draw"))
+                .setMessage("Do you want to save game?").setCancelable(false)
+                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
