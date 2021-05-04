@@ -1960,9 +1960,11 @@ public class Chess<exception_var> extends AppCompatActivity {
                         //print board
                         printButtons(imageButtons, game.newboard);
                         if (game.turn == chess.Chess.Turn.BLACK) {
+                            System.out.println("test1");
                             game.turn = chess.Chess.Turn.WHITE;
                             txtTurn.setText(R.string.whiteTurn);
                         } else if (game.turn == chess.Chess.Turn.WHITE){
+                            System.out.println("test2");
                             game.turn = chess.Chess.Turn.BLACK;
                             txtTurn.setText(R.string.blackTurn);
                         }
