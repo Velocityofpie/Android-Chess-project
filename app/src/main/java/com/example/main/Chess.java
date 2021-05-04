@@ -15,6 +15,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -51,13 +58,20 @@ public class Chess<exception_var> extends AppCompatActivity {
         ArrayList<chess.Board> moves = new ArrayList<chess.Board>();
         String initialPiece;
         boolean gameStillRunning = true;
+        ArrayList<Match> matches;
 
         @Override
         protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_interface);
 
-        playerVplayer = findViewById(R.id.playerVplayer);
+            try {
+                matches = readMatches();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            playerVplayer = findViewById(R.id.playerVplayer);
         gamesPlayed = findViewById(R.id.gamesPlayed);
 
         playerVplayer.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +178,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 //String sending_turn = null;
 
-                bundle.putString("draw", "Game ended in a draw");
+                //bundle.putString("draw", "Game ended in a draw");
                 btnDraw = (Button) findViewById(R.id.btnDraw);
                 btnDraw.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2021,6 +2035,44 @@ public class Chess<exception_var> extends AppCompatActivity {
             }
         }
         return buttons[0][0];
+    }
+
+        public ArrayList<Match> readMatches() throws IOException {
+            ArrayList<Match> out = new ArrayList<>();
+            File file = new File("app/src/main/java/matches.dat");
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            boolean cont = true;
+            while (cont) {
+                try {
+                    Match curr = (Match) ois.readObject();
+                    if (curr != null) {
+                        out.add(curr);
+                    } else {
+                        cont = false;
+                    }
+
+                } catch (Exception e) {
+                    break;
+                }
+            }
+            ois.close();
+            fis.close();
+            return out;
+        }
+
+    public static void saveData(ArrayList<Match> m) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("app/src/main/java/matches.dat");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            for (Match curr: m) {
+                objectOutputStream.writeObject(curr);
+            }
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
     }
 
         public void printButtons (ImageButton[][]arr, chess.Board board){

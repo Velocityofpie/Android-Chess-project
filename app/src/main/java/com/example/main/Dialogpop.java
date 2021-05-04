@@ -14,13 +14,13 @@ public class Dialogpop extends AppCompatDialogFragment {
         Bundle bundle = getArguments();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // String p = bundle.getString(game.Trun);
-        assert bundle != null;
-        builder.setTitle(bundle.getString("draw"))
+        builder.setTitle("Game ended in a draw")
                 .setMessage("Do you want to save game?").setCancelable(false)
                 .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
+
                     }
                 });
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
