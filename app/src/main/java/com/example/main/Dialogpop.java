@@ -14,6 +14,7 @@ public class Dialogpop extends AppCompatDialogFragment {
         Bundle bundle = getArguments();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // String p = bundle.getString(game.Trun);
+        assert bundle != null;
         builder.setTitle(bundle.getString("draw"))
                 .setMessage("Do you want to save game?").setCancelable(false)
                 .setPositiveButton("YES", new DialogInterface.OnClickListener() {
