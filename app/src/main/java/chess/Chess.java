@@ -77,6 +77,414 @@ public class Chess {
             drawWasOffered = false;
         }
 
+        if (input.equals("ai")) {
+            //for white piece
+            for (int i=0; i<8; i++) {
+                for (int j=0; j<8; j++) {
+                    //loop until a white piece is found
+                    if (newboard.square[i][j] != null) {
+                        if (newboard.square[i][j].player.equals("w")) {
+                            Piece p = newboard.square[i][j].piece;
+
+                            if (p instanceof Pawn) {
+                                //try moving forward
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving diagonally left
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving diagonally right
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Rook) {
+                                //try moving one space up
+                                try {
+                                     if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                         newboard.square[i-1][j] = newboard.square[i][j];
+                                         newboard.square[i][j] = null;
+                                         turn = Turn.BLACK;
+                                         continue;
+                                     }
+                                } catch (Exception e) {}
+
+                                //try moving one space down
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j], newboard, turn, j+1, 8-i, j+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving left
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i][j-1], newboard, turn, j+1, 8-i, j, 8-i, false)) {
+                                        newboard.square[i][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving right
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i, false)) {
+                                        newboard.square[i][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Bishop) {
+                                //try moving up right
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up left
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down left
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j-1], newboard, turn, j+1, 8-i, j, 8-i-1, false)) {
+                                        newboard.square[i+1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down right
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Queen) {
+                                //try moving one space up
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving one space down
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j], newboard, turn, j+1, 8-i, j+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i][j-1], newboard, turn, j+1, 8-i, j, 8-i, false)) {
+                                        newboard.square[i][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i, false)) {
+                                        newboard.square[i][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j-1], newboard, turn, j+1, 8-i, j, 8-i-1, false)) {
+                                        newboard.square[i+1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.BLACK;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+                            }
+
+
+                        } else if (newboard.square[i][j].player.equals("b")) {
+                            Piece p = newboard.square[i][j].piece;
+
+                            if (p instanceof Pawn) {
+                                //try moving forward
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving diagonally left
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving diagonally right
+                                try {
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Rook) {
+                                //try moving one space up
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving one space down
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j], newboard, turn, j+1, 8-i, j+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving left
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i][j-1], newboard, turn, j+1, 8-i, j, 8-i, false)) {
+                                        newboard.square[i][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving right
+                                try {
+                                    if (((Rook) p).isMoveValid(newboard.square[i][j], newboard.square[i][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i, false)) {
+                                        newboard.square[i][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Bishop) {
+                                //try moving up right
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up left
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down left
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j-1], newboard, turn, j+1, 8-i, j, 8-i-1, false)) {
+                                        newboard.square[i+1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down right
+                                try {
+                                    if (((Bishop) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                            } else if (p instanceof Queen) {
+                                //try moving one space up
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving one space down
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j], newboard, turn, j+1, 8-i, j+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i][j-1], newboard, turn, j+1, 8-i, j, 8-i, false)) {
+                                        newboard.square[i][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i, false)) {
+                                        newboard.square[i][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
+                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving up left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
+                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down left
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j-1], newboard, turn, j+1, 8-i, j, 8-i-1, false)) {
+                                        newboard.square[i+1][j-1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+
+                                //try moving down right
+                                try {
+                                    if (((Queen) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j+1] = newboard.square[i][j];
+                                        newboard.square[i][j] = null;
+                                        turn = Turn.WHITE;
+                                        continue;
+                                    }
+                                } catch (Exception e) {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         int[] arr = findTheKings(newboard);
         int wKrow = arr[0]; int wKcol = arr[1]; int bKrow = arr[2]; int bKcol = arr[3];
 
