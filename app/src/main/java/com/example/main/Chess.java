@@ -161,18 +161,22 @@ public class Chess<exception_var> extends AppCompatActivity {
                         buttonArrayList.add(imageButtons[i][j]);
                     }
                 }
-                btnDraw = (Button) findViewById(R.id.btnDraw);
-                btnDraw.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        openDialog();
-                    }
+                Bundle bundle = new Bundle();
+                //String sending_turn = null;
 
-                    public void openDialog() {
-                        Dialogpop dialogpop = new Dialogpop();
-                        dialogpop.show(getSupportFragmentManager(), "example dia");
-                    }
-                });
+                //bundle.putString(game.turn);
+//                btnDraw = (Button) findViewById(R.id.btnDraw);
+//                btnDraw.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        openDialog();
+//                    }
+//
+//                    public void openDialog() {
+//                        Dialogpop dialogpop = new Dialogpop();
+//                        dialogpop.show(getSupportFragmentManager(), "example dia");
+//                    }
+//                });
 
                 btnResign.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1972,9 +1976,11 @@ public class Chess<exception_var> extends AppCompatActivity {
                         //print board
                         printButtons(imageButtons, game.newboard);
                         if (game.turn == chess.Chess.Turn.BLACK) {
+                            System.out.println("test1");
                             game.turn = chess.Chess.Turn.WHITE;
                             txtTurn.setText(R.string.whiteTurn);
                         } else if (game.turn == chess.Chess.Turn.WHITE){
+                            System.out.println("test2");
                             game.turn = chess.Chess.Turn.BLACK;
                             txtTurn.setText(R.string.blackTurn);
                         }

@@ -1013,13 +1013,13 @@ public class Chess {
      */
     public static void endGame(Turn turn, boolean draw) {
         if (draw){
-            System.out.println("Draw");
+            //System.out.println("Draw");
         }
         else if (turn == Turn.WHITE)  {
-            System.out.println("White wins");
+            //System.out.println("White wins");
         }
         else {
-            System.out.println("Black wins");
+            //System.out.println("Black wins");
         }
 
 
