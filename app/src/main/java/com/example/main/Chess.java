@@ -18,6 +18,15 @@ import android.widget.TextView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import chess.Square;
+import pieces.Bishop;
+import pieces.King;
+import pieces.Knight;
+import pieces.Pawn;
+import pieces.Piece;
+import pieces.Queen;
+import pieces.Rook;
+
 public class Chess extends AppCompatActivity {
 
     Button playerVplayer, gamesPlayed;
@@ -126,14 +135,14 @@ public class Chess extends AppCompatActivity {
 
                 //create an array of the buttons
                 ImageButton[][] imageButtons = {
-                        {btn_a1, btn_b1, btn_c1, btn_d1, btn_e1, btn_f1, btn_g1, btn_h1},
-                        {btn_a2, btn_b2, btn_c2, btn_d2, btn_e2, btn_f2, btn_g2, btn_h2},
-                        {btn_a3, btn_b3, btn_c3, btn_d3, btn_e3, btn_f3, btn_g3, btn_h3},
-                        {btn_a4, btn_b4, btn_c4, btn_d4, btn_e4, btn_f4, btn_g4, btn_h4},
-                        {btn_a5, btn_b5, btn_c5, btn_d5, btn_e5, btn_f5, btn_g5, btn_h5},
-                        {btn_a6, btn_b6, btn_c6, btn_d6, btn_e6, btn_f6, btn_g6, btn_h6},
+                        {btn_a8, btn_b8, btn_c8, btn_d8, btn_e8, btn_f8, btn_g8, btn_h8},
                         {btn_a7, btn_b7, btn_c7, btn_d7, btn_e7, btn_f7, btn_g7, btn_h7},
-                        {btn_a8, btn_b8, btn_c8, btn_d8, btn_e8, btn_f8, btn_g8, btn_h8}
+                        {btn_a6, btn_b6, btn_c6, btn_d6, btn_e6, btn_f6, btn_g6, btn_h6},
+                        {btn_a5, btn_b5, btn_c5, btn_d5, btn_e5, btn_f5, btn_g5, btn_h5},
+                        {btn_a4, btn_b4, btn_c4, btn_d4, btn_e4, btn_f4, btn_g4, btn_h4},
+                        {btn_a3, btn_b3, btn_c3, btn_d3, btn_e3, btn_f3, btn_g3, btn_h3},
+                        {btn_a2, btn_b2, btn_c2, btn_d2, btn_e2, btn_f2, btn_g2, btn_h2},
+                        {btn_a1, btn_b1, btn_c1, btn_d1, btn_e1, btn_f1, btn_g1, btn_h1}
                 };
 
                 ArrayList<ImageButton> buttonArrayList = new ArrayList<ImageButton>();
@@ -157,7 +166,6 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                System.out.println("it moved to a1");
                                 btn_a1.setImageResource(R.drawable.wp);
                                 ImageButton b = getImageButton(imageButtons, output.substring(0,2));
                                 b.setImageResource(R.drawable.nullimg);
@@ -184,7 +192,6 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                System.out.println("it moved to a2");
                                 btn_a1.setImageResource(R.drawable.wp);
                                 ImageButton b = getImageButton(imageButtons, output.substring(0,2));
                                 b.setImageResource(R.drawable.nullimg);
@@ -211,8 +218,33 @@ public class Chess extends AppCompatActivity {
                             System.out.println(output);
                             boolean moved = game.movePiece(output);
                             if (moved) {
-                                System.out.println("it moved to a3");
-                                btn_a3.setImageResource(R.drawable.wp);
+
+                                char ch1 = output.charAt(0);
+                                char ch2 = output.charAt(1);
+                                int x1 = ch1 - 96; //file of chosenPiece (i.e. a=1, b=2,...)
+                                int y1 = ch2 - 48; //rank of chosenPiece
+                                char ch3 = output.charAt(3);
+                                char ch4 = output.charAt(4);
+                                int x2 = ch3 - 96; //file of desiredLocation (i.e. a=1, b=2,...)
+                                int y2 = ch4 - 48; //rank of desiredLocation
+
+                                Piece p = game.newboard.square[8-y2][x2-1].piece;
+                                if (p instanceof Pawn) {
+                                    btn_a3.setImageResource(R.drawable.wp);
+                                } else if (p instanceof Knight) {
+                                    btn_a3.setImageResource(R.drawable.wn);
+                                } else if (p instanceof Rook) {
+                                    btn_a3.setImageResource(R.drawable.wr);
+                                } else if (p instanceof Bishop) {
+                                    btn_a3.setImageResource(R.drawable.wb);
+                                } else if (p instanceof Queen) {
+                                    btn_a3.setImageResource(R.drawable.wq);
+                                } else if (p instanceof King) {
+                                    btn_a3.setImageResource(R.drawable.wk);
+                                } else {
+                                    btn_a3.setImageResource(R.drawable.nullimg);
+                                }
+
                                 ImageButton b = getImageButton(imageButtons, output.substring(0,2));
                                 b.setImageResource(R.drawable.nullimg);
                                 output = "";
@@ -225,6 +257,8 @@ public class Chess extends AppCompatActivity {
                         }
                     }
                 });
+
+
 
 
 
@@ -278,5 +312,15 @@ public class Chess extends AppCompatActivity {
             }
         }
         return buttons[0][0];
+    }
+
+    public void printButtons(ImageButton[][] arr, Board board) {
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                ImageButton currButton = arr[i][j];
+
+            }
+        }
     }
 }

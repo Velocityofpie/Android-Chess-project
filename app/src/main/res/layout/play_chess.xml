@@ -550,7 +550,7 @@
             android:background="#eeeed5"
             android:contentDescription="@string/b1"
             android:onClick="onBoardClick"
-            android:src="@drawable/wk" />
+            android:src="@drawable/wn" />
 
         <ImageButton
             android:id="@+id/btn1c"
