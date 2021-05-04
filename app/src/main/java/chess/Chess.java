@@ -48,10 +48,10 @@ public class Chess {
         if (input.equals("resign")) {
             GameisRunning = false;
             if (turn == Turn.WHITE) {
-                System.out.print("Black wins");
+                endGame(Turn.BLACK, false);
                 return true;
             } else {
-                System.out.print("White wins");
+                endGame(Turn.BLACK, false);
                 return true;
             }
 
@@ -69,12 +69,8 @@ public class Chess {
         }
 
 
-
-        if (input.length() == 11 && input.substring(6, 11).equals("draw?")){
-            drawWasOffered= true;
-        }
-        else{
-            drawWasOffered = false;
+        if (input.equals("draw")) {
+            endGame(turn, true);
         }
 
         if (input.equals("ai")) {
@@ -1026,7 +1022,7 @@ public class Chess {
             System.out.println("Black wins");
         }
 
-        System.exit(0);
+
     }
 
 
