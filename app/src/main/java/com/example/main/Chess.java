@@ -1754,36 +1754,38 @@ public class Chess extends AppCompatActivity {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 ImageButton currButton = arr[i][j];
-                Piece p = board.square[i][j].piece;
-                String player = board.square[i][j].player;
+                if (board.square[i][j] != null) {
+                    Piece p = board.square[i][j].piece;
+                    String player = board.square[i][j].player;
 
-                if (player.equals("w")) {
-                    if (p instanceof Pawn) {
-                        currButton.setImageResource(R.drawable.wp);
-                    } else if (p instanceof Knight) {
-                        currButton.setImageResource(R.drawable.wn);
-                    } else if (p instanceof Rook) {
-                        currButton.setImageResource(R.drawable.wr);
-                    } else if (p instanceof Bishop) {
-                        currButton.setImageResource(R.drawable.wb);
-                    } else if (p instanceof Queen) {
-                        currButton.setImageResource(R.drawable.wq);
-                    } else if (p instanceof King) {
-                        currButton.setImageResource(R.drawable.wk);
-                    }
-                } else if (player.equals("b")) {
-                    if (p instanceof Pawn) {
-                        currButton.setImageResource(R.drawable.bp);
-                    } else if (p instanceof Knight) {
-                        currButton.setImageResource(R.drawable.bn);
-                    } else if (p instanceof Rook) {
-                        currButton.setImageResource(R.drawable.br);
-                    } else if (p instanceof Bishop) {
-                        currButton.setImageResource(R.drawable.bb);
-                    } else if (p instanceof Queen) {
-                        currButton.setImageResource(R.drawable.bq);
-                    } else if (p instanceof King) {
-                        currButton.setImageResource(R.drawable.bk);
+                    if (player.equals("w")) {
+                        if (p instanceof Pawn) {
+                            currButton.setImageResource(R.drawable.wp);
+                        } else if (p instanceof Knight) {
+                            currButton.setImageResource(R.drawable.wn);
+                        } else if (p instanceof Rook) {
+                            currButton.setImageResource(R.drawable.wr);
+                        } else if (p instanceof Bishop) {
+                            currButton.setImageResource(R.drawable.wb);
+                        } else if (p instanceof Queen) {
+                            currButton.setImageResource(R.drawable.wq);
+                        } else if (p instanceof King) {
+                            currButton.setImageResource(R.drawable.wk);
+                        }
+                    } else if (player.equals("b")) {
+                        if (p instanceof Pawn) {
+                            currButton.setImageResource(R.drawable.bp);
+                        } else if (p instanceof Knight) {
+                            currButton.setImageResource(R.drawable.bn);
+                        } else if (p instanceof Rook) {
+                            currButton.setImageResource(R.drawable.br);
+                        } else if (p instanceof Bishop) {
+                            currButton.setImageResource(R.drawable.bb);
+                        } else if (p instanceof Queen) {
+                            currButton.setImageResource(R.drawable.bq);
+                        } else if (p instanceof King) {
+                            currButton.setImageResource(R.drawable.bk);
+                        }
                     }
                 } else {
                     currButton.setImageResource(R.drawable.nullimg);
