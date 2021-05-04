@@ -39,6 +39,8 @@ public class Chess extends AppCompatActivity {
             btn_a7, btn_b7, btn_c7, btn_d7, btn_e7, btn_f7, btn_g7, btn_h7,
             btn_a8, btn_b8, btn_c8, btn_d8, btn_e8, btn_f8, btn_g8, btn_h8;
 
+    Button btnAI;
+
     TextView txtTurn;
 
     String input = "";
@@ -123,6 +125,8 @@ public class Chess extends AppCompatActivity {
                 btn_h6 = findViewById(R.id.btn6h);
                 btn_h7 = findViewById(R.id.btn7h);
                 btn_h8 = findViewById(R.id.btn8h);
+
+                btnAI = findViewById(R.id.btnAI);
 
 
 
@@ -1715,6 +1719,16 @@ public class Chess extends AppCompatActivity {
                 });
 
 
+                btnAI.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        output = "";
+                        boolean moved = game.movePiece("ai");
+                        if (moved) {
+                            printButtons(imageButtons, game.newboard);
+                        }
+                    }
+                });
 
 
 

@@ -93,7 +93,7 @@ public class Chess {
                                         newboard.square[i-1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -103,7 +103,7 @@ public class Chess {
                                         newboard.square[i-1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -113,7 +113,7 @@ public class Chess {
                                         newboard.square[i-1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -124,7 +124,7 @@ public class Chess {
                                          newboard.square[i-1][j] = newboard.square[i][j];
                                          newboard.square[i][j] = null;
                                          turn = Turn.BLACK;
-                                         continue;
+                                         return true;
                                      }
                                 } catch (Exception e) {}
 
@@ -134,7 +134,7 @@ public class Chess {
                                         newboard.square[i+1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -144,7 +144,7 @@ public class Chess {
                                         newboard.square[i][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -154,7 +154,7 @@ public class Chess {
                                         newboard.square[i][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -165,7 +165,7 @@ public class Chess {
                                         newboard.square[i-1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -175,7 +175,7 @@ public class Chess {
                                         newboard.square[i-1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -185,7 +185,7 @@ public class Chess {
                                         newboard.square[i+1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -195,7 +195,7 @@ public class Chess {
                                         newboard.square[i+1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -206,7 +206,7 @@ public class Chess {
                                         newboard.square[i-1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -216,7 +216,7 @@ public class Chess {
                                         newboard.square[i+1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -226,7 +226,7 @@ public class Chess {
                                         newboard.square[i][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -236,7 +236,7 @@ public class Chess {
                                         newboard.square[i][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -246,7 +246,7 @@ public class Chess {
                                         newboard.square[i-1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -256,7 +256,7 @@ public class Chess {
                                         newboard.square[i-1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -266,7 +266,7 @@ public class Chess {
                                         newboard.square[i+1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -276,7 +276,7 @@ public class Chess {
                                         newboard.square[i+1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.BLACK;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
                             }
@@ -288,31 +288,31 @@ public class Chess {
                             if (p instanceof Pawn) {
                                 //try moving forward
                                 try {
-                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j], newboard, turn, j+1, 8-i, j+1, 8-i+1, false)) {
-                                        newboard.square[i-1][j] = newboard.square[i][j];
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j], newboard, turn, j+1, 8-i, j+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
                                 //try moving diagonally left
                                 try {
-                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j-1], newboard, turn, j+1, 8-i, j, 8-i+1, false)) {
-                                        newboard.square[i-1][j-1] = newboard.square[i][j];
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j-1], newboard, turn, j+1, 8-i, j, 8-i-1, false)) {
+                                        newboard.square[i+1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
                                 //try moving diagonally right
                                 try {
-                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i-1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i+1, false)) {
-                                        newboard.square[i-1][j+1] = newboard.square[i][j];
+                                    if (((Pawn) p).isMoveValid(newboard.square[i][j], newboard.square[i+1][j+1], newboard, turn, j+1, 8-i, j+1+1, 8-i-1, false)) {
+                                        newboard.square[i+1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -323,7 +323,7 @@ public class Chess {
                                         newboard.square[i-1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -333,7 +333,7 @@ public class Chess {
                                         newboard.square[i+1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -343,7 +343,7 @@ public class Chess {
                                         newboard.square[i][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -353,7 +353,7 @@ public class Chess {
                                         newboard.square[i][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -364,7 +364,7 @@ public class Chess {
                                         newboard.square[i-1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -374,7 +374,7 @@ public class Chess {
                                         newboard.square[i-1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -384,7 +384,7 @@ public class Chess {
                                         newboard.square[i+1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -394,7 +394,7 @@ public class Chess {
                                         newboard.square[i+1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -405,7 +405,7 @@ public class Chess {
                                         newboard.square[i-1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -415,7 +415,7 @@ public class Chess {
                                         newboard.square[i+1][j] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -425,7 +425,7 @@ public class Chess {
                                         newboard.square[i][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -435,7 +435,7 @@ public class Chess {
                                         newboard.square[i][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -445,7 +445,7 @@ public class Chess {
                                         newboard.square[i-1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -455,7 +455,7 @@ public class Chess {
                                         newboard.square[i-1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -465,7 +465,7 @@ public class Chess {
                                         newboard.square[i+1][j-1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
 
@@ -475,7 +475,7 @@ public class Chess {
                                         newboard.square[i+1][j+1] = newboard.square[i][j];
                                         newboard.square[i][j] = null;
                                         turn = Turn.WHITE;
-                                        continue;
+                                        return true;
                                     }
                                 } catch (Exception e) {}
                             }
