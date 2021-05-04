@@ -132,7 +132,7 @@ public class Chess extends AppCompatActivity {
 
 
                 txtTurn = findViewById(R.id.txtTurn);
-                txtTurn.setText("White's turn");
+                txtTurn.setText(R.string.whiteTurn);
 
                 //create a new chess game
                 chess.Chess game = new chess.Chess();
@@ -175,9 +175,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -199,9 +199,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -223,9 +223,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -247,9 +247,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -271,9 +271,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -295,9 +295,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -319,9 +319,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -343,9 +343,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -367,9 +367,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -391,9 +391,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -415,9 +415,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -439,9 +439,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -463,9 +463,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -487,9 +487,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -511,9 +511,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -535,9 +535,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -559,9 +559,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -583,9 +583,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -607,9 +607,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -631,9 +631,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -655,9 +655,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -679,9 +679,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -703,9 +703,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -727,9 +727,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -751,9 +751,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -775,9 +775,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -799,9 +799,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -823,9 +823,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -847,9 +847,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -871,9 +871,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -895,9 +895,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -919,9 +919,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -943,9 +943,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -967,9 +967,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -991,9 +991,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1015,9 +1015,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1039,9 +1039,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1063,9 +1063,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1087,9 +1087,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1111,9 +1111,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1135,9 +1135,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1159,9 +1159,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1183,9 +1183,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1207,9 +1207,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1231,9 +1231,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1255,9 +1255,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1279,9 +1279,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1303,9 +1303,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1327,9 +1327,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1351,9 +1351,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1375,9 +1375,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1399,9 +1399,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1423,9 +1423,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1447,9 +1447,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1471,9 +1471,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1495,9 +1495,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1519,9 +1519,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1543,9 +1543,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1567,9 +1567,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1591,9 +1591,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1615,9 +1615,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1639,9 +1639,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1663,9 +1663,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1687,9 +1687,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });
@@ -1711,9 +1711,9 @@ public class Chess extends AppCompatActivity {
                             }
                         }
                         if (game.turn == chess.Chess.Turn.BLACK) {
-                            txtTurn.setText("Black's turn");
+                            txtTurn.setText(R.string.blackTurn);
                         } else {
-                            txtTurn.setText("White's turn");
+                            txtTurn.setText(R.string.whiteTurn);
                         }
                     }
                 });

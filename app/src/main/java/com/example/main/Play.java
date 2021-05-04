@@ -30,7 +30,7 @@ public class Play extends AppCompatActivity implements View.OnClickListener {
 
         setContentView(R.layout.play_chess);
         txtTurn = findViewById(R.id.txtTurn);
-        txtTurn.setText("White's turn");
+        txtTurn.setText(R.string.whiteTurn);
 
 
 
