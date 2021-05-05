@@ -7,8 +7,6 @@ package com.example.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,16 +15,13 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import chess.Board;
-import chess.Square;
 import pieces.Bishop;
 import pieces.King;
 import pieces.Knight;
@@ -144,7 +139,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                 btn_h7 = findViewById(R.id.btn7h);
                 btn_h8 = findViewById(R.id.btn8h);
 
-                btnAI = findViewById(R.id.btnAI);
+                btnAI = findViewById(R.id.btnBack);
                 btnBack = findViewById(R.id.btnBack);
                 btnResign = findViewById(R.id.btnResign);
 
