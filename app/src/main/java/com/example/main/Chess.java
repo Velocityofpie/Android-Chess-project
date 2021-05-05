@@ -7,21 +7,31 @@ package com.example.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import chess.Board;
+import chess.Square;
 import pieces.Bishop;
 import pieces.King;
 import pieces.Knight;
@@ -54,6 +64,8 @@ public class Chess<exception_var> extends AppCompatActivity {
         String initialPiece;
         boolean gameStillRunning = true;
         ArrayList<Match> matches;
+        String nameOfGame;
+        Context context;
 
         @Override
         protected void onCreate (Bundle savedInstanceState){
@@ -72,6 +84,7 @@ public class Chess<exception_var> extends AppCompatActivity {
         playerVplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                context = v.getContext();
                 System.out.println("yahoo");
                 setContentView(R.layout.play_chess);
                 btn_a1 = findViewById(R.id.btn1a);
@@ -139,7 +152,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                 btn_h7 = findViewById(R.id.btn7h);
                 btn_h8 = findViewById(R.id.btn8h);
 
-                btnAI = findViewById(R.id.btnBack);
+                btnAI = findViewById(R.id.btnAI);
                 btnBack = findViewById(R.id.btnBack);
                 btnResign = findViewById(R.id.btnResign);
 
@@ -178,26 +191,101 @@ public class Chess<exception_var> extends AppCompatActivity {
                 btnDraw.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        openDialog();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                        builder.setTitle("The game ended in a draw")
+                                .setMessage("Enter a name if you would like to save game.");
+
+// Set up the input
+                        final EditText input = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                nameOfGame = input.getText().toString();
+                                //create a new match
+                                Match nMatch = new Match(nameOfGame, moves);
+                                matches.add(nMatch);
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
                     }
 
-                    public void openDialog() {
-                        Dialogpop dialogpop = new Dialogpop();
-                        dialogpop.show(getSupportFragmentManager(), "example dia");
-                    }
                 });
 
                 btnResign.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         game.movePiece("resign");
-                        openDialog();
-                    }
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("Black resigned. White wins!")
+                            .setMessage("Enter a name if you would like to save game.");
 
-                    public void openDialog() {
-                        Dialogpop dialogpop = new Dialogpop();
-                        String str = game.turn + " resigned";
-                        dialogpop.show(getSupportFragmentManager(), str);
+// Set up the input
+                            final EditText input = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                            builder.setView(input);
+
+// Set up the buttons
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    nameOfGame = input.getText().toString();
+                                    //create a new match
+                                    Match nMatch = new Match(nameOfGame, moves);
+                                    matches.add(nMatch);
+                                }
+                            });
+                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+
+                            builder.show();
+                        } else {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("White resigned. Black wins!")
+                                    .setMessage("Enter a name if you would like to save game.");
+
+// Set up the input
+                            final EditText input = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                            builder.setView(input);
+
+// Set up the buttons
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    nameOfGame = input.getText().toString();
+                                    //create a new match
+                                    Match nMatch = new Match(nameOfGame, moves);
+                                    matches.add(nMatch);
+                                }
+                            });
+                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+
+                            builder.show();
+                        }
                     }
                 });
 
