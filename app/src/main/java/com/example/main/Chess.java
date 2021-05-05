@@ -311,6 +311,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
                                 printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                btnBack.setEnabled(true);
                             }
                             output = "";
                         }
@@ -2133,7 +2134,7 @@ public class Chess<exception_var> extends AppCompatActivity {
 
         public ArrayList<Match> readMatches() throws IOException {
             ArrayList<Match> out = new ArrayList<>();
-            File file = new File("app/src/main/java/matches.dat");
+            File file = new File("/data/data/com.example.chess62/files/matches.dat");
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
             boolean cont = true;
@@ -2155,10 +2156,9 @@ public class Chess<exception_var> extends AppCompatActivity {
             return out;
         }
 
-
     public static void saveData(ArrayList<Match> m) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("src\\main\\res\\matches.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream("/data/data/com.example.chess62/files/matches.dat");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             for (Match curr: m) {
                 objectOutputStream.writeObject(curr);
