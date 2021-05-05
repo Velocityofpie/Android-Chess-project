@@ -642,7 +642,7 @@
             app:backgroundTint="#1f1e1b" />
 
         <Button
-            android:id="@+id/btnBack"
+            android:id="@+id/btnAI"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="19dp"
             android:layout_height="37dp"
