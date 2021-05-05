@@ -16,9 +16,11 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.File;
@@ -30,6 +32,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 import chess.Board;
 import chess.Square;
@@ -56,6 +59,8 @@ public class Chess<exception_var> extends AppCompatActivity {
         Button btnAI;
         Button btnBack;
         Button btnResign;
+
+        ListView match_list;
 
         TextView txtTurn;
 
@@ -2563,6 +2568,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+                match_list = findViewById(R.id.match_list);
+                try {
+                    match_list.setAdapter(
+                            new ArrayAdapter<Match>(v.getContext(), R.layout.saved_games, (List<Match>) match_list));
+                } catch (Exception e) {
+
+                }
 
             }
         });
