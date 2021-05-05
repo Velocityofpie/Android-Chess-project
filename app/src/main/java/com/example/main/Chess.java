@@ -196,13 +196,23 @@ public class Chess<exception_var> extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         game.movePiece("resign");
-                        openDialog();
+                        if (game.turn == chess.Chess.Turn.BLACK) {
+                            blackResign();
+                        } else {
+                            whiteResign();
+                        }
                     }
 
-                    public void openDialog() {
-                        Dialogpop dialogpop = new Dialogpop();
+                    public void blackResign() {
+                        DialogPopBlackResign dp = new DialogPopBlackResign();
                         String str = game.turn + " resigned";
-                        dialogpop.show(getSupportFragmentManager(), str);
+                        dp.show(getSupportFragmentManager(), str);
+                    }
+
+                    public void whiteResign() {
+                        DialogPopWhiteResign dp = new DialogPopWhiteResign();
+                        String str = game.turn + " resigned";
+                        dp.show(getSupportFragmentManager(), str);
                     }
                 });
 
