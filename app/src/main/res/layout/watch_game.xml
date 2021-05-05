@@ -617,7 +617,7 @@
         app:layout_constraintVertical_bias="0.279">
 
         <Button
-            android:id="@+id/btnAI"
+            android:id="@+id/btnBack"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="37dp"
@@ -629,7 +629,7 @@
             app:backgroundTint="#1f1e1b" />
 
         <Button
-            android:id="@+id/btnUndo"
+            android:id="@+id/btnNext"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="37dp"
