@@ -311,7 +311,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
                                 printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
-                                btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
                             }
                             output = "";
                         }
@@ -340,6 +346,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -368,6 +381,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -395,6 +415,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -422,6 +449,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -449,6 +483,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -476,6 +517,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -503,6 +551,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -530,6 +585,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -557,6 +619,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -584,6 +653,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -611,6 +687,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -638,6 +721,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -665,6 +755,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -692,6 +789,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -719,6 +823,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -746,6 +857,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -773,6 +891,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -800,6 +925,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -827,6 +959,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -854,6 +993,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -881,6 +1027,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -908,6 +1061,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -935,6 +1095,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -962,6 +1129,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -989,6 +1163,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1016,6 +1197,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1043,6 +1231,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1070,6 +1265,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1097,6 +1299,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1124,6 +1333,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1151,6 +1367,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1178,6 +1401,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1205,6 +1435,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1232,6 +1469,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1259,6 +1503,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1286,6 +1537,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1313,6 +1571,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1340,6 +1605,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1367,6 +1639,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1394,6 +1673,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1421,6 +1707,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1448,6 +1741,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1475,6 +1775,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1502,6 +1809,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1529,6 +1843,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1556,6 +1877,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1583,6 +1911,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1610,6 +1945,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1637,6 +1979,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1664,6 +2013,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1691,6 +2047,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1718,6 +2081,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1745,6 +2115,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1772,6 +2149,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1799,6 +2183,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1826,6 +2217,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1853,6 +2251,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1880,6 +2285,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1907,6 +2319,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1934,6 +2353,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1961,6 +2387,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -1988,6 +2421,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -2015,6 +2455,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -2042,6 +2489,13 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
         printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+                                if (!game.GameisRunning) {
+                                    if (game.turn == chess.Chess.Turn.BLACK) {
+                                        displayEndWhiteWins();
+                                    } else {
+                                        displayEndBlackWins();
+                                    }
+                                }
     }
     output = "";
                         }
@@ -2064,6 +2518,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                             moves.add(b);
                             printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
+
                         }
                     }
                 });
@@ -2091,6 +2546,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                         btnBack.setEnabled(false);
                     }
                 });
+
 
 
             }
@@ -2215,6 +2671,72 @@ public class Chess<exception_var> extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void displayEndBlackWins() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Checkmate! Black Wins!")
+                .setMessage("Enter a name if you would like to save game.");
+
+// Set up the input
+        final EditText editText = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        editText.setInputType(InputType.TYPE_CLASS_TEXT);
+        builder.setView(editText);
+
+// Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                nameOfGame = editText.getText().toString();
+                //create a new match
+                Match nMatch = new Match(nameOfGame, moves);
+                matches.add(nMatch);
+                saveData(matches);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+
+    }
+
+    private void displayEndWhiteWins() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Checkmate! White Wins!")
+                .setMessage("Enter a name if you would like to save game.");
+
+// Set up the input
+        final EditText editText = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        editText.setInputType(InputType.TYPE_CLASS_TEXT);
+        builder.setView(editText);
+
+// Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                nameOfGame = editText.getText().toString();
+                //create a new match
+                Match nMatch = new Match(nameOfGame, moves);
+                matches.add(nMatch);
+                saveData(matches);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+
     }
 
 }

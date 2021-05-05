@@ -17,10 +17,10 @@ public class Chess {
     public Board newboard;
     public enum Turn { WHITE, BLACK };
     public Turn turn;
-
+    public boolean GameisRunning;
 
     boolean draw=false, drawWasOffered=false;
-    boolean GameisRunning=true;
+
     boolean enPassantFormation = false;
     boolean underCheckWhite = false;
     boolean underCheckBlack = false;
@@ -31,6 +31,7 @@ public class Chess {
     public Chess() {
         newboard = new Board();
         turn = Turn.WHITE;
+        GameisRunning = true;
     }
 
 
@@ -1011,7 +1012,8 @@ public class Chess {
      * @param turn
      * @param draw
      */
-    public static void endGame(Turn turn, boolean draw) {
+    public void endGame(Turn turn, boolean draw) {
+
         if (draw){
             //System.out.println("Draw");
         }
@@ -1021,7 +1023,7 @@ public class Chess {
         else {
             //System.out.println("Black wins");
         }
-
+        this.GameisRunning = false;
 
     }
 
