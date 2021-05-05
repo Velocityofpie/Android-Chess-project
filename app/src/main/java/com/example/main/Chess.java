@@ -14,6 +14,7 @@ import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,7 +64,7 @@ public class Chess<exception_var> extends AppCompatActivity {
         ArrayList<chess.Board> moves = new ArrayList<chess.Board>();
         String initialPiece;
         boolean gameStillRunning = true;
-        ArrayList<Match> matches;
+        ArrayList<Match> matches = new ArrayList<>();
         String nameOfGame;
         Context context;
 
@@ -196,16 +197,16 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 .setMessage("Enter a name if you would like to save game.");
 
 // Set up the input
-                        final EditText input = new EditText(context);
+                        final EditText editText = new EditText(context);
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        builder.setView(input);
+                        editText.setInputType(InputType.TYPE_CLASS_TEXT);
+                        builder.setView(editText);
 
 // Set up the buttons
                         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                nameOfGame = input.getText().toString();
+                                nameOfGame = editText.getText().toString();
                                 //create a new match
                                 Match nMatch = new Match(nameOfGame, moves);
                                 matches.add(nMatch);
@@ -234,19 +235,20 @@ public class Chess<exception_var> extends AppCompatActivity {
                             .setMessage("Enter a name if you would like to save game.");
 
 // Set up the input
-                            final EditText input = new EditText(context);
+                            final EditText editText = new EditText(context);
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                            builder.setView(input);
+                            editText.setInputType(InputType.TYPE_CLASS_TEXT);
+                            builder.setView(editText);
 
 // Set up the buttons
                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    nameOfGame = input.getText().toString();
+                                    nameOfGame = editText.getText().toString();
                                     //create a new match
                                     Match nMatch = new Match(nameOfGame, moves);
                                     matches.add(nMatch);
+                                    System.out.println(matches.get(0));
                                     saveData(matches);
                                 }
                             });
@@ -264,16 +266,16 @@ public class Chess<exception_var> extends AppCompatActivity {
                                     .setMessage("Enter a name if you would like to save game.");
 
 // Set up the input
-                            final EditText input = new EditText(context);
+                            final EditText editText = new EditText(context);
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                            builder.setView(input);
+                            editText.setInputType(InputType.TYPE_CLASS_TEXT);
+                            builder.setView(editText);
 
 // Set up the buttons
                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    nameOfGame = input.getText().toString();
+                                    nameOfGame = editText.getText().toString();
                                     //create a new match
                                     Match nMatch = new Match(nameOfGame, moves);
                                     matches.add(nMatch);
@@ -2156,7 +2158,7 @@ public class Chess<exception_var> extends AppCompatActivity {
 
     public static void saveData(ArrayList<Match> m) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("app/src/main/java/matches.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream("src\\main\\java\\matches.dat");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             for (Match curr: m) {
                 objectOutputStream.writeObject(curr);
@@ -2167,6 +2169,8 @@ public class Chess<exception_var> extends AppCompatActivity {
             exception.printStackTrace();
         }
     }
+
+
 
         public void printButtons (ImageButton[][]arr, chess.Board board){
 

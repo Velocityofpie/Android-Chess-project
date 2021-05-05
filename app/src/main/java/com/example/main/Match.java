@@ -1,11 +1,12 @@
 package com.example.main;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 import chess.Board;
 
-public class Match {
+public class Match implements java.io.Serializable {
     public String name;
     public LocalDate date;
     public ArrayList<Board> moves;
@@ -19,4 +20,10 @@ public class Match {
     public void setName(String n) {
         this.name = n;
     }
+
+    public String toString() {
+        return this.name;
+    }
+
+
 }
