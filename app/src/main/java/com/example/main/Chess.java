@@ -311,7 +311,6 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 moves.add(b);
                                 printButtons(imageButtons, game.newboard);
                                 btnBack.setEnabled(true);
-                                btnBack.setEnabled(true);
                             }
                             output = "";
                         }
@@ -2156,9 +2155,10 @@ public class Chess<exception_var> extends AppCompatActivity {
             return out;
         }
 
+
     public static void saveData(ArrayList<Match> m) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("src\\main\\java\\matches.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream("src\\main\\res\\matches.txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             for (Match curr: m) {
                 objectOutputStream.writeObject(curr);
