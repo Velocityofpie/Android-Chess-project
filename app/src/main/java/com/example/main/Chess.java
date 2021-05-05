@@ -209,6 +209,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                                 //create a new match
                                 Match nMatch = new Match(nameOfGame, moves);
                                 matches.add(nMatch);
+                                saveData(matches);
                             }
                         });
                         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -246,6 +247,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                                     //create a new match
                                     Match nMatch = new Match(nameOfGame, moves);
                                     matches.add(nMatch);
+                                    saveData(matches);
                                 }
                             });
                             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -275,6 +277,7 @@ public class Chess<exception_var> extends AppCompatActivity {
                                     //create a new match
                                     Match nMatch = new Match(nameOfGame, moves);
                                     matches.add(nMatch);
+                                    saveData(matches);
                                 }
                             });
                             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -2096,6 +2099,13 @@ public class Chess<exception_var> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.saved_games);
+                try {
+                    matches = readMatches();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
             }
         });
     }
